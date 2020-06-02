@@ -8,51 +8,267 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>英雄联盟</title>
 </head>
 
 <body>
-    <header class="small">
-        <div class="w">
-            <div class="fl">
-                <img src="./images/logo-public.png" alt="">
-                <ul class="fl">
+    <header class="small pr">
+        <div class="head_nav w">
+            <img src="./images/logo-public.png" alt="" class="fl">
+            <ul class="fl">
+                <li>
+                    <a href="">
+                        <h3 class="head_title">游戏资料</h3>
+                        <span class="head_subtitle">GAME INFO</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3 class="head_title">商城/合作</h3>
+                        <span class="head_subtitle">STORE</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3 class="head_title">社区互动</h3>
+                        <span class="head_subtitle">COMMUNITY</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3 class="head_title">赛事官网</h3>
+                        <span class="head_subtitle">ESPORTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <h3 class="head_title">自助系统</h3>
+                        <span class="head_subtitle">SYSTEM</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="dark_mark"></div>
+        <div class="head_sub_nav pa">
+            <div class="head_sub_nav_inner w">
+                <ul>
                     <li>
                         <a href="">
-                            <h3 class="head_title">游戏资料</h3>
-                            <span class="head_subtitle">GAME INFO</span>
+                            <span>游戏下载</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <h3 class="head_title">商城/合作</h3>
-                            <span class="head_subtitle">STORE</span>
+                            <span>新手指引</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <h3 class="head_title">社区互动</h3>
-                            <span class="head_subtitle">COMMUNITY</span>
+                            <span>资料库</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <h3 class="head_title">赛事官网</h3>
-                            <span class="head_subtitle">ESPORTS</span>
+                            <i class="icon_new"></i>
+                            <span>云顶之弈</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <h3 class="head_title">自助系统</h3>
-                            <span class="head_subtitle">SYSTEM</span>
+                            <i class="icon_new"></i>
+                            <span>攻略中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>开发者基地</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>海克斯战利品库</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>英雄联盟宇宙</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>点券充值</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_hot"></i>
+                            <span>道聚城</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>周边商城</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>LOL桌游</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>LOL信用卡</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>网吧特权</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>电竞小说</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>官方社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>视频中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>官方论坛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>官方微信</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>官方微博</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>玩家创作馆</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_new"></i>
+                            <span>作者入驻计划</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>玩家服务</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="icon_hot"></i>
+                            <span>LPL职业联赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_hot"></i>
+                            <span>LDL发展联赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>全球总决赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>全明星赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_new"></i>
+                            <span>季中杯</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>德玛西亚杯</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>全国高校联赛</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_new"></i>
+                            <span>转区系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_hot"></i>
+                            <span>封号查询</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>账号注销</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="icon_new"></i>
+                            <span>信誉分系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>服务器状态查询</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>秩序殿堂</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>峡谷之巅</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="fr"></div>
         </div>
-        <div class="dark_mark"></div>
     </header>
     <main></main>
     <footer></footer>

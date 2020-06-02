@@ -11,15 +11,19 @@
     float: right;
 }
 
-header {
+.pa {
+    position: absolute;
+}
+
+.pr {
     position: relative;
 }
 
-header img {
+header img.fl {
     float: left;
     width: 167px;
     height: 60px;
-    margin-top: 10PX;
+    margin-top: 10px;
 }
 
 header.big {
@@ -32,19 +36,16 @@ header.small {
     background: url("../images/header_small_bg.jpg") no-repeat center;
 }
 
-header .w {
+header .head_nav {
     position: relative;
     top: 0;
     z-index: 10;
-}
-
-header .fl {
-    height: 78px;
-    /* background-color: pink; */
+    overflow: hidden;
 }
 
 header .dark_mark {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 131px;
     background: url(../images/dark-jianbian.png) repeat;
@@ -52,19 +53,21 @@ header .dark_mark {
     z-index: 1;
 }
 
-header ul {
+header ul.fl {
+    width: 55%;
     margin-left: -4px;
 }
 
-header li {
+header ul.fl li {
     float: left;
+    width: 20%;
     height: 78px;
-    padding: 16px 35.6px;
+    padding-top: 15px;
     text-align: center;
     letter-spacing: 1px;
 }
 
-header li>a {
+header ul.fl li>a {
     display: block;
     width: 100%;
     width: 100%;
@@ -80,4 +83,72 @@ header .head_subtitle {
     display: block;
     font-size: 11px;
     color: #AEAEAE;
+}
+
+@keyframes topin {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.head_sub_nav {
+    /* display: none; */
+    top: 0;
+    width: 100%;
+    padding: 78px 0 32px 0;
+    background: url(../images/dark60-bg-repeat.png);
+    z-index: 1;
+    overflow: hidden;
+    animation: topin .3s;
+}
+
+.head_sub_nav_inner {
+    padding: 10px 450px 0 160px;
+    overflow: hidden;
+}
+
+.head_sub_nav_inner ul {
+    float: left;
+    width: 20%;
+}
+
+.head_sub_nav_inner ul>li {
+    height: 29px;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.head_sub_nav_inner ul>li a {
+    display: block;
+
+}
+
+.head_sub_nav_inner ul>li a:hover {
+    color: #e2bc6a;
+
+}
+
+.head_sub_nav_inner i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -2px 2px 0 0;
+    line-height: 29px;
+    vertical-align: middle;
+    background: url(../images/topfoot-spr.png) no-repeat;
+}
+
+.head_sub_nav_inner .icon_new {
+    background-position: -381px -65px;
+}
+
+.head_sub_nav_inner .icon_hot {
+    background-position: -347px -84px;
 }
