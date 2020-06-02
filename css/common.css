@@ -1,0 +1,83 @@
+.w {
+    width: 1358px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+header {
+    position: relative;
+}
+
+header img {
+    float: left;
+    width: 167px;
+    height: 60px;
+    margin-top: 10PX;
+}
+
+header.big {
+    height: 720px;
+    background: url("../images/header_big_bg.jpg") no-repeat center;
+}
+
+header.small {
+    height: 360px;
+    background: url("../images/header_small_bg.jpg") no-repeat center;
+}
+
+header .w {
+    position: relative;
+    top: 0;
+    z-index: 10;
+}
+
+header .fl {
+    height: 78px;
+    /* background-color: pink; */
+}
+
+header .dark_mark {
+    position: absolute;
+    width: 100%;
+    height: 131px;
+    background: url(../images/dark-jianbian.png) repeat;
+    background-position: center top;
+    z-index: 1;
+}
+
+header ul {
+    margin-left: -4px;
+}
+
+header li {
+    float: left;
+    height: 78px;
+    padding: 16px 35.6px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+header li>a {
+    display: block;
+    width: 100%;
+    width: 100%;
+}
+
+header .head_title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #FFF;
+}
+
+header .head_subtitle {
+    display: block;
+    font-size: 11px;
+    color: #AEAEAE;
+}
