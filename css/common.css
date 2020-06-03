@@ -38,14 +38,14 @@ header .dark_mark {
 
 header ul.fl {
     width: 55%;
-    margin-left: -4px;
+    margin-left: -5px;
 }
 
 header ul.fl li {
     float: left;
     width: 20%;
     height: 78px;
-    padding-top: 15px;
+    padding-top: 16px;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -64,6 +64,7 @@ header .head_title {
 
 header .head_subtitle {
     display: block;
+    margin-top: -1px;
     font-size: 11px;
     color: #AEAEAE;
 }
@@ -180,7 +181,7 @@ header a[class^="icon"] {
 .head_nav .icon_phone {
     width: 16px;
     height: 24px;
-    margin: 26px 43px 0 0;
+    margin: 27px 43px 0 0;
     background-position: -303px -84px;
 }
 
@@ -354,9 +355,13 @@ header a[class^="icon"] {
     background-position: -216px -39px;
 }
 
+.head_topact .link:hover {
+    filter: brightness(1.15);
+}
+
 .head_topact .version {
-    bottom: 32px;
-    left: 50%;
+    bottom: 30px;
+    right: 273px;
 }
 
 .head_topact .version .text {
@@ -364,6 +369,7 @@ header a[class^="icon"] {
 }
 
 .head_topact .version .id {
+    margin-right: 10px;
     color: #f5d185;
 }
 
@@ -371,6 +377,15 @@ header a[class^="icon"] {
     height: 22px;
     line-height: 22px;
     font-size: 12px;
-    padding: 0 20px;
-    border: 2px solid #f5d185;
+    padding: 4px 15px;
+    border: 2px solid #f5d185;    
+    border-image: linear-gradient(to bottom,#6b5024 0,#b88d35 100%);
+    border-image-slice: 1;
+    background: rgba(0,0,0,.65);
+    color: #f5d185;
+}
+
+.head_topact .version a:hover {
+    background: rgba(0,0,0,.9);
+    filter: brightness(1.15);
 }
