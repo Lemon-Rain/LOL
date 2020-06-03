@@ -13,7 +13,7 @@
 
 <body>
     <header class="big pr">
-        <div class="head_nav w">
+        <div class="head_nav w pr">
             <img src="./images/logo-public.png" alt="" class="fl">
             <ul class="fl" onmouseover="subNavDown()" onmouseout="subNavUp()">
                 <li>
@@ -49,13 +49,33 @@
             </ul>
             <ul class="fr">
                 <li><a href="#" class="icon_search" onclick="searchOpen()"></a></li>
-                <li><a href="#" class="icon_phone" onmouseover="display('.hover_phone', 'show')" onmouseover="display('.hover_phone', 'hide')"></a></li>
+                <li><a href="#" class="icon_phone" onmouseover="display('.hover_phone', 'show')"
+                        onmouseout="display('.hover_phone', 'none')"></a></li>
                 <li>
-                    <div class="unlogin">
-                        <a href="#" class="icon_user fl"><img src="images/default.png" alt="" srcset=""></a><span>亲爱的召唤师，欢迎</span><a href="#" class="head_login">登录</a>
+                    <div class="unlogin pr" onmouseover="display('.hover_login', 'show')" onmouseout="display('.hover_login', 'none')">
+                        <a href="#" class="icon_user fl"><img src="images/default.png" alt=""
+                                srcset=""></a><span>亲爱的召唤师，欢迎</span><a href="#" class="head_login">登录</a>
                     </div>
                 </li>
             </ul>
+            <div class="hover_phone pa" onmouseover="display('.hover_phone', 'show')"
+                onmouseout="display('.hover_phone', 'none')">
+                <div class="qrcode">
+                    <img src="images/zm-qrcode.jpg" class="qrcode_img">
+                </div>
+                <p>扫码下载掌上英雄联盟</p>
+                <img src="images/polo.gif" class="polo pa">
+            </div>
+            <div class="hover_login pa" onmouseover="display('.hover_login', 'show')" onmouseout="display('.hover_login', 'none')">
+                <p class="p1">
+                    登录并且绑定大区后才可以查看您的具体信息哦<br>
+                    (包括战绩、资产、声望）
+                </p>
+                <p class="p2">
+                    官网个人信息显示略有延迟，请以游戏数据为准
+                </p>
+                <a href="#" class="">进入个人中心<i class="arrow"></i></a>
+            </div>
         </div>
         <div class="dark_mark"></div>
         <div class="head_sub_nav pa hide" onmouseover="subNavDown()" onmouseout="subNavUp()">
@@ -278,13 +298,22 @@
                 <input type="text" placeholder="搜索 lol.qq.com">
                 <a href="#" class="icon_search"></a>
             </div>
-        </div>
-        <div class="hover_phone pa">
-            <div class="qrcode">
-                <img src="images/zm-qrcode.jpg" class="qrcode_img">
+            <div class="hover_phone pa" onmouseover="display('.hover_phone', 'show')"
+                onmouseout="display('.hover_phone', 'none')">
+                <div class="qrcode">
+                    <img src="images/zm-qrcode.jpg" class="qrcode_img">
+                </div>
+                <p>扫码下载掌上英雄联盟</p>
+                <img src="images/polo.gif" class="polo pa">
             </div>
-            <p>扫码下载掌上英雄联盟</p>
-            <img src="images/polo.gif" class="polo pa">
+        </div>
+        <div class="head_topact w">
+            <a href="#" class="link pa"></a>
+            <div class="version pa">
+                <span class="text">当前游戏版本：</span>
+                <span class="id">Ver 10.11 </span>
+                <a href="">版本详情</a>
+            </div>
         </div>
     </header>
     <main></main>

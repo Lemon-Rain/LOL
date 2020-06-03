@@ -24,7 +24,6 @@ header .head_nav {
     position: relative;
     top: 0;
     z-index: 10;
-    overflow: hidden;
 }
 
 header .dark_mark {
@@ -81,6 +80,16 @@ header .head_subtitle {
     }
 }
 
+@keyframes opacityin {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
 .head_sub_nav {
     /* display: none; */
     top: 0;
@@ -95,7 +104,7 @@ header .head_subtitle {
 
 .head_sub_nav_inner {
     padding: 10px 450px 0 160px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .head_sub_nav_inner ul {
@@ -149,23 +158,23 @@ header .head_subtitle {
     height: 78px;
     line-height: 78px;
     color: #FEFEFE;
+    z-index: 1;
 }
 
 header a[class^="icon"] {
     display: inline-block;
     background: url(../images/topfoot-spr.png) no-repeat;
 }
-/* .icon_search,
-.icon_phone,
-.icon_user {
-} */
 
 .head_nav .icon_search,
-.hover_search .icon_search{
+.hover_search .icon_search {
+    position: relative;
+    top: 0;
     width: 21px;
     height: 21px;
     margin: 28px 34px 0 0;
     background-position: -381px -39px;
+    z-index: 100;
 }
 
 .head_nav .icon_phone {
@@ -177,7 +186,7 @@ header a[class^="icon"] {
 
 .head_nav .icon_user {
     width: 48px;
-    height: 48px;    
+    height: 48px;
     margin: 14px 10px 0 0;
     background-position: -216px -117px;
 }
@@ -197,14 +206,10 @@ header a[class^="icon"] {
     display: none;
     top: 0;
     width: 100%;
-    height: 78px;    
+    height: 78px;
     background-color: #081322;
     z-index: 10;
-    animation: topin .3s;
-}
-
-.hover_search_inner {
-    height: 100%;
+    animation: opacityin .3s;
 }
 
 .hover_search .icon_close {
@@ -226,7 +231,7 @@ header a[class^="icon"] {
     width: 368px;
     height: 40px;
     line-height: 40px;
-    margin: 19px 209px 0  0;
+    margin: 19px 209px 0 0;
     font-size: 16px;
     color: #fff;
     text-indent: 5px;
@@ -239,7 +244,6 @@ header a[class^="icon"] {
     right: 190px;
     width: 211px;
     height: 178px;
-    z-index: 10;
     color: #cdbe91;
     background: url(../images/topfoot-spr.png) no-repeat;
     animation: topin .3s;
@@ -267,4 +271,106 @@ header a[class^="icon"] {
 .hover_phone .polo {
     top: 130px;
     left: 170px;
+}
+
+.hover_login {
+    display: none;
+    top: 0;
+    right: -38px;
+    width: 310px;
+    padding-top: 78px;
+    font-size: 12px;
+    color: #848383;
+    background: url(../images/dark70-bg-repeat.png);
+    text-align: center;
+    animation: topin .3s;
+}
+
+.hover_login .p1 {
+    margin-top: 20px;
+}
+
+.hover_login .p2 {
+    margin-top: 15px;
+}
+
+.hover_login a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    margin-top: 20px;
+    background-color: #000;
+    font-size: 16px;
+    color: #FFF;
+}
+
+@keyframes flat_slide {
+    0% {
+        background-position: -213px -126px;
+    }
+
+    10% {
+        background-position: -210px -126px;
+    }
+
+    20% {
+        background-position: -213px -126px;
+    }
+
+    30% {
+        background-position: -210px -126px;
+    }
+
+    50% {
+        background-position: -213px -126px;
+    }
+}
+
+.hover_login a .arrow {
+    display: inline-block;
+    width: 20px;
+    height: 9px;    
+    margin-left: 5px;
+    background: url(../images/comm-spr.png) no-repeat;
+    background-position: -213px -126px;
+}
+
+.hover_login a:hover .arrow {
+    animation: flat_slide 1.5s linear infinite;
+}
+
+.head_topact {
+    height: 100%;
+    font-size: 14px;
+}
+
+.head_topact .link {
+    bottom: 32px;
+    left: 50%;
+    width: 160px;
+    height: 40px;
+    margin-left: -77px;
+    background: url(../images/topfoot-spr.png) no-repeat;
+    background-position: -216px -39px;
+}
+
+.head_topact .version {
+    bottom: 32px;
+    left: 50%;
+}
+
+.head_topact .version .text {
+    color: #888787;
+}
+
+.head_topact .version .id {
+    color: #f5d185;
+}
+
+.head_topact .version a {
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 0 20px;
+    border: 2px solid #f5d185;
 }
