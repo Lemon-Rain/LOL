@@ -1,5 +1,5 @@
 header {
-    min-width: 1358px;
+    min-width: 1230px;
     transition: all .6s;
 }
 
@@ -231,4 +231,40 @@ header a[class^="icon"] {
     color: #fff;
     text-indent: 5px;
     background-color: #081322;
+}
+
+.hover_phone {
+    display: none;
+    top: 68px;
+    right: 190px;
+    width: 211px;
+    height: 178px;
+    z-index: 10;
+    color: #cdbe91;
+    background: url(../images/topfoot-spr.png) no-repeat;
+    animation: topin .3s;
+}
+
+.hover_phone .qrcode {
+    display: block;
+    width: 119px;
+    height: 119px;
+    margin: 23px auto 10px auto;
+    border-radius: 10px;
+    background-color: #FFF;
+}
+
+.hover_phone .qrcode .qrcode_img {
+    margin: 5px 0 0 5px;
+    width: 110px;
+    height: 110px;
+}
+
+.hover_phone p {
+    text-align: center;
+}
+
+.hover_phone .polo {
+    top: 130px;
+    left: 170px;
 }

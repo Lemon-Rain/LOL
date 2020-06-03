@@ -55,7 +55,8 @@ body {
 }
 
 .w {
-    width: 1358px;
+    max-width: 1358px;
+    min-width: 1230px;
     margin: 0 auto;
 }
 

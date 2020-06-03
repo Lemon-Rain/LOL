@@ -23,3 +23,12 @@ function searchOpen() {
     var search = document.querySelector(".hover_search");
     search.style.display = "block";
 }
+
+function display(name, model) {
+    var el = document.querySelector(name);
+    if (model == 'show') {
+        el.style.display = block;
+    } else {
+        el.style.display = none;
+    }
+}
