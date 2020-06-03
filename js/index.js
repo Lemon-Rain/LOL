@@ -32,3 +32,31 @@ function display(name, model) {
         el.style.display = "none";
     }
 }
+
+var promoIndex = 0;
+function startRotate() {
+    rotateTimer = setInterval("Rotate()", 3000);
+}
+startRotate();
+function stopRotate() {
+    clearTimeout(rotateTimer);
+}
+function setPromoIndex(n) {
+    stopRotate();
+    promoIndex = n;
+    Rotate();
+}
+function Rotate() {
+    var img = document.querySelector('.promo_img_list');
+    img.style.marginLeft = promoIndex * -820 + 'px';
+    var navList = document.querySelector('.promo_nav').querySelectorAll('.item');
+    for (var i = 0; i < navList.length; i++) {
+        if (i == promoIndex) {
+            navList[i].className = 'item selected';
+        } else {
+            navList[i].className = 'item';
+        }
+    }
+    promoIndex++;
+    promoIndex %= 5;
+}

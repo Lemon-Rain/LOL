@@ -32,8 +32,9 @@ a {
 }
 
 body {
+    min-width: 1230px;
     background-color: #eee;
-    font: 12px/1.5 tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif;
+    font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
     color: #e3e2e2;
 }
 
