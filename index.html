@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>英雄联盟</title>
 </head>
 
 <body>
-    <header class="small pr">
+    <header class="big pr">
         <div class="head_nav w">
             <img src="./images/logo-public.png" alt="" class="fl">
-            <ul class="fl">
+            <ul class="fl" onmouseover="subNavDown()" onmouseout="subNavUp()">
                 <li>
                     <a href="">
                         <h3 class="head_title">游戏资料</h3>
@@ -49,13 +48,17 @@
                 </li>
             </ul>
             <ul class="fr">
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><a href="" class="icon_search"></a></li>
+                <li><a href="" class="icon_phone"></a></li>
+                <li>
+                    <div class="unlogin">
+                        <a href="" class="icon_user fl"><img src="images/default.png" alt="" srcset=""></a><span>亲爱的召唤师，欢迎</span><a href="" class="head_login">登录</a>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="dark_mark"></div>
-        <div class="head_sub_nav pa">
+        <div class="head_sub_nav pa hide" onmouseover="subNavDown()" onmouseout="subNavUp()">
             <div class="head_sub_nav_inner w">
                 <ul>
                     <li>
@@ -267,6 +270,11 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="hover_search pa">
+            <div class="hover_search_inner">
+                a
             </div>
         </div>
     </header>

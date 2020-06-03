@@ -37,6 +37,10 @@ body {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 .clearfix::after {
     visibility: hidden;
     clear: both;
