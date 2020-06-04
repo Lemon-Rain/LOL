@@ -306,24 +306,16 @@ header a[class^="icon"] {
 }
 
 @keyframes flat_slide {
-    0% {
-        background-position: -213px -126px;
-    }
 
-    10% {
-        background-position: -210px -126px;
-    }
-
-    20% {
-        background-position: -213px -126px;
-    }
-
-    30% {
-        background-position: -210px -126px;
-    }
-
+    0%,
+    20%,
     50% {
         background-position: -213px -126px;
+    }
+
+    10%,
+    30% {
+        background-position: -210px -126px;
     }
 }
 
@@ -389,4 +381,3 @@ a:hover .arrow {
     background: rgba(0, 0, 0, .9);
     filter: brightness(1.15);
 }
-
