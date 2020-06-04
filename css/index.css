@@ -54,13 +54,13 @@ main {
 
 .new_tab.tab {
     border-bottom: 1px solid #e0e2e2;
+    font-size: 18px;
 }
 
 .tab .item {
     position: relative;
     float: left;
     height: 100%;
-    font-size: 18px;
     letter-spacing: 1px;
     color: #676767;
     cursor: pointer;
@@ -222,8 +222,8 @@ main {
     color: #1da6ba;
 }
 
-.content_item {
-    display: none;    
+.news .content_item {
+    display: none;
     width: 496px;
     height: 305px;
 }
@@ -241,6 +241,11 @@ main {
     background-color: #e3e2e2;
 }
 
+.news .more:hover {
+    border-radius: 4px;
+    background-color: #dad8d8;
+}
+
 .news .more .s1 {
     color: #676767;
 }
@@ -256,12 +261,13 @@ main {
 }
 
 .top_tab {
-    height: 35px;
+    position: relative;
     line-height: 35px;
     font-size: 16px;
 }
 
 .top_tab .tab_title {
+    float: left;
     font-size: 24px;
     color: #0B0B0B;
 }
@@ -276,4 +282,142 @@ main {
     height: 28px;
     margin-right: 4px;
     background-color: #1DA6BA;
+}
+
+.top_tab .tab {
+    float: right;
+    width: 692px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e2e2;
+}
+
+.top_tab .tab .item {
+    margin-right: 40px;
+}
+
+.top_tab .more {
+    float: right;
+    font-size: 12px;
+    color: #7ea1a6;
+}
+
+.top_tab .more:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    color: #1da6ba;
+}
+
+.hot_act .content_item {
+    display: none;
+    width: 840px;
+    height: 278px;
+    margin-top: 21px;
+}
+
+.hot_act .content_item.selected {
+    display: block;
+}
+
+.content_item .act_item {
+    position: relative;
+    float: left;
+    width: 193px;
+    height: 100%;
+    margin-right: 16px;
+    background-color: #fefefe;
+    transition: all .2s;
+}
+
+.content_item .act_item:hover {
+    transform: translateY(-3%);
+}
+
+.content_item .act_title {
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.content_item .act_item:hover .act_title {
+    color: #1da6ba;
+}
+
+.content_item .act_date {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    width: 174px;
+    font-size: 12px;
+    color: #1da6ba;
+}
+
+.content_item .icon_new {
+    float: right;
+    width: 30px;
+    height: 15px;
+    margin-top: 2px;
+    background: url(../images/comm-spr.png) no-repeat;
+    background-position: -301px -46px;
+}
+
+.content_item .act_mask {
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content_item .mask_inner {
+    display: none;
+    height: 207px;
+    line-height: 207px;
+    text-align: center;
+    background: url(../images/dark70-bg-repeat.png) repeat;
+    transition: all .2s;
+}
+
+@keyframes buttomIn {
+    0% {
+        transform: translateY(3%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content_item .act_item:hover .mask_inner{
+    display: block;
+    animation: buttomIn .2s;
+}
+
+.content_item .hover_bg {
+    position: absolute;
+    top: 3px;
+    right: 1.5px;
+    display: block;
+    width: 188px;
+    height: 200px;
+    background: url(../images/comm-spr.png) no-repeat;
+}
+
+.hover_act_info {
+    display: inline-block;
+    padding: 0 12px;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.hover_act_info .p1 {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #cdbe91;
+}
+
+.hover_act_info .p2 {
+    font-size: 12px;
+    color: #9d9c9c;
 }
