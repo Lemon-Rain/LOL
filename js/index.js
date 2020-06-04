@@ -88,11 +88,14 @@ function Rotate() {
 
 function select(n) {
     var tabList = document.querySelector('.tab').querySelectorAll('.item');
+    var contentList = document.querySelector('.tab_content').querySelectorAll('.content_item')
     for (var i = 0; i < tabList.length; i++) {
         if (i == n) {
             tabList[i].className = 'item selected';
+            contentList[i].className = 'content_item selected';
         } else {
             tabList[i].className = 'item';
+            contentList[i].className = 'content_item';
         }
     }
 }
