@@ -1,3 +1,24 @@
+function resize() {
+    var minWidth = 1246;
+    var maxWidth = 1358 + 16 + 42;
+    var screenW = window.innerWidth;
+    var scaleW, scaleV;
+    var zoomBox = document.querySelector('main');
+    if (screenW > minWidth && maxWidth > screenW) {
+        scaleW = screenW;
+    } else if (screenW <= minWidth) {
+        scaleW = minWidth;
+    } else {
+        scaleW = maxWidth;
+    }
+    scaleV = scaleW / maxWidth;
+    zoomBox.style.zoom = scaleV;
+}
+
+window.onresize = resize;
+
+window.onload = resize;
+
 window.onscroll = function () {
     if (window.scrollY > 50) {
         document.querySelector("header").className = "small pr";
@@ -34,18 +55,22 @@ function display(name, model) {
 }
 
 var promoIndex = 0;
+
 function startRotate() {
     rotateTimer = setInterval("Rotate()", 3000);
 }
 startRotate();
+
 function stopRotate() {
     clearTimeout(rotateTimer);
 }
+
 function setPromoIndex(n) {
     stopRotate();
     promoIndex = n;
     Rotate();
 }
+
 function Rotate() {
     var img = document.querySelector('.promo_img_list');
     img.style.marginLeft = promoIndex * -820 + 'px';
@@ -59,4 +84,15 @@ function Rotate() {
     }
     promoIndex++;
     promoIndex %= 5;
+}
+
+function select(n) {
+    var tabList = document.querySelector('.tab').querySelectorAll('.item');
+    for (var i = 0; i < tabList.length; i++) {
+        if (i == n) {
+            tabList[i].className = 'item selected';
+        } else {
+            tabList[i].className = 'item';
+        }
+    }
 }

@@ -52,7 +52,8 @@
                 <li><a href="#" class="icon_phone" onmouseover="display('.hover_phone', 'show')"
                         onmouseout="display('.hover_phone', 'none')"></a></li>
                 <li>
-                    <div class="unlogin pr" onmouseover="display('.hover_login', 'show')" onmouseout="display('.hover_login', 'none')">
+                    <div class="unlogin pr" onmouseover="display('.hover_login', 'show')"
+                        onmouseout="display('.hover_login', 'none')">
                         <a href="#" class="icon_user fl"><img src="images/default.png" alt=""
                                 srcset=""></a><span>亲爱的召唤师，欢迎</span><a href="#" class="head_login">登录</a>
                     </div>
@@ -66,7 +67,8 @@
                 <p>扫码下载掌上英雄联盟</p>
                 <img src="images/polo.gif" class="polo pa">
             </div>
-            <div class="hover_login pa" onmouseover="display('.hover_login', 'show')" onmouseout="display('.hover_login', 'none')">
+            <div class="hover_login pa" onmouseover="display('.hover_login', 'show')"
+                onmouseout="display('.hover_login', 'none')">
                 <p class="p1">
                     登录并且绑定大区后才可以查看您的具体信息哦<br>
                     (包括战绩、资产、声望）
@@ -307,7 +309,7 @@
                 <img src="images/polo.gif" class="polo pa">
             </div>
         </div>
-        <div class="head_topact w">
+        <div class="head_topact w pr">
             <a href="#" class="link pa"></a>
             <div class="version pa">
                 <span class="text">当前游戏版本：</span><span class="id">Ver 10.11 </span>
@@ -316,8 +318,8 @@
         </div>
     </header>
     <main>
-        <section>
-            <div class="promo">
+        <section class="top_wrap">
+            <div class="promo fl">
                 <ul class="promo_img_list">
                     <li class="item"><img src="images/promo_img_1.jpeg" alt="#"></a></li>
                     <li class="item"><img src="images/promo_img_2.jpeg" alt="#"></a></li>
@@ -333,8 +335,39 @@
                     <li class="item" onmouseover="setPromoIndex(4)" onmouseout="startRotate()">瑟庄妮故事更新</li>
                 </ul>
             </div>
-            <div class="news">
-
+            <div class="news fr">
+                <ul class="new_tab tab">
+                    <li class="item selected" onmouseover="select(0)">综合</li>
+                    <li class="item" onmouseover="select(1)">公告</li>
+                    <li class="item" onmouseover="select(2)">赛事</li>
+                    <li class="item" onmouseover="select(3)">攻略</li>
+                    <li class="item" onmouseover="select(4)">社区</li>
+                </ul>
+                <div class="new_content tab_content">
+                    <ul>
+                        <li class="item first">
+                            <a href="#">永恒星碑系统介绍 记录你的精彩时刻</a>
+                        </li>
+                        <li class="item inform">
+                            <span class="tag">公告</span><a href="#" class="new_title">未来币(2020)商店更新公告</a><span class="new_date">05-29</span>
+                        </li>
+                        <li class="item inform">
+                            <span class="tag">新闻</span><a href="#" class="new_title">免费获得【坚韧不屈 沃利贝尔】皮肤</a><span class="new_date">05-28</span>
+                        </li>
+                        <li class="item sport">
+                            <span class="tag">赛事</span><a href="#" class="new_title">英雄联盟电竞赛事2020第二赛季：开赛指南</a><span class="new_date">06-03</span>
+                        </li>
+                        <li class="item inform">
+                            <span class="tag">其他</span><a href="#" class="new_title">#Uzi宣布退役#来游戏圈发表你的感想</a><span class="new_date">06-03</span>
+                        </li>
+                        <li class="item video">
+                            <span class="tag">视频</span><a href="#" class="new_title">Uzi退役独家专访：如果时间还够，很多东西我可以做到 </a><span class="new_date">06-03</span>
+                        </li>
+                        <li class="item sport">
+                            <span class="tag">赛事</span><a href="#" class="new_title">再见LPL006！Uzi职业生涯高光数据回顾</a><span class="new_date">06-03</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
