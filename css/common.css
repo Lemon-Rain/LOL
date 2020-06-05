@@ -321,7 +321,7 @@ header a[class^="icon"] {
 
 .arrow {
     display: inline-block;
-    width: 20px;
+    width: 15px;
     height: 9px;
     margin-left: 5px;
     background: url(../images/comm-spr.png) no-repeat;
@@ -381,3 +381,4 @@ a:hover .arrow {
     background: rgba(0, 0, 0, .9);
     filter: brightness(1.15);
 }
+
