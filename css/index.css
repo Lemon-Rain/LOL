@@ -192,7 +192,6 @@ main {
 
 .video .new_title:hover {
     color: #e9852d;
-    ;
 }
 
 .sport .tag {
@@ -716,7 +715,7 @@ main section.top_wrap .icon_new {
         transform: scale(0.8);
         opacity: 0;
     }
-    
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -725,12 +724,11 @@ main section.top_wrap .icon_new {
 
 .new_skin:hover .hover_skin_video {
     display: block;
-    /* transform: scale(1); */
     animation: scale2 .3s;
 }
 
 .hover_skin_video,
-.hover_version{
+.hover_version {
     display: none;
     position: absolute;
     top: -20px;
@@ -738,7 +736,6 @@ main section.top_wrap .icon_new {
     width: 434px;
     background-color: #fff;
     box-shadow: 0 0 20px #aaa;
-    /* transform: scale(0.8); */
 }
 
 .hover_skin_video video {
@@ -764,7 +761,7 @@ main section.top_wrap .icon_new {
 .info .more {
     position: absolute;
     right: 10px;
-    top: 18px;
+    bottom: 18px;
     padding: 3px 14px;
     border: 1px solid #bb9a6c;
     font-size: 14px;
@@ -782,7 +779,6 @@ main section.top_wrap .icon_new {
     width: 496px;
     height: 254px;
     margin-top: 66px;
-    /* background-color: pink; */
 }
 
 .new_version li {
@@ -792,15 +788,73 @@ main section.top_wrap .icon_new {
 .new_version .version {
     width: 240px;
     height: 120px;
-    margin-right: 16px;
+    margin-right: 14px;
     background: url(../images/version_img.jpg) no-repeat;
 }
 
+.version:hover .hover_version {
+    display: block;
+    animation: scale2 .3s;
+}
+
+.hover_version {
+    width: 270px;
+    height: 250px;
+    /* margin-left: 2px; */
+    z-index: 10;
+}
+
+.hover_version .version_img {
+    width: 270px;
+    height: 186px;
+}
+
 .new_version .development_log {
-    width: 240px;
+    width: 242px;
     height: 180px;
     margin-bottom: 16px;
     background: url(../images/log_img.jpg) no-repeat;
+}
+
+.development_log:hover .hover_mask{
+    display: block;
+}
+
+.development_log .hover_mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background: url(../images/dark70-bg-repeat.png) repeat;
+    animation: opacityin .3s;
+}
+
+.hover_mask .hover_inner {
+    height: 174px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -399px 3px;
+    text-align: center;
+    line-height: 174px;
+}
+
+.hover_inner .hover_log_info {
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.hover_inner .title {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #cdbe91;
+}
+
+.hover_inner .subtitle {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #9d9c9c;
 }
 
 .new_version .new_model {
@@ -811,13 +865,18 @@ main section.top_wrap .icon_new {
     background: url(../images/model_img.jpg) no-repeat;
 }
 
+.new_version .new_model:hover {
+    background: url(../images/model_hover_img.jpg) no-repeat;
+    transition: all .4s;
+}
+
 .new_version .week_free {
     float: right;
-    width: 240px;
+    width: 239px;
     height: 58px;
     line-height: 58px;
     background: url(../images/index-spr.png) no-repeat;
-    background-position: -192px -253px;
+    background-position: -193px -253px;
     font-size: 16px;
     transition: filter .5s;
 }
@@ -853,9 +912,4 @@ main section.top_wrap .icon_new {
 
 .week_free .arrow {
     background-position: -342px -99px;
-}
-
-.hover_version {
-    display: block;
-    z-index: 10;
 }
