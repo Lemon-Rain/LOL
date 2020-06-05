@@ -611,3 +611,102 @@ main section.top_wrap .icon_new {
     top: 0;
     left: 0;
 }
+
+.new_hero_skin {
+    width: 820px;
+    height: 254px;
+    margin-top: 66px;
+}
+
+.new_hero,
+.new_skin {
+    position: relative;
+    width: 402px;
+    height: 100%;
+}
+
+.new_hero {
+    float: left;
+    background: url(../images/new_hero.jpg) no-repeat;
+}
+
+.new_skin {
+    float: right;
+    background: url(../images/new_skin.jpg) no-repeat;
+}
+
+.new_hero_skin .lable {
+    display: inline-block;
+    height: 20px;
+    padding: 0 6px;
+    margin: 10px 0 0 9px;
+    border-radius: 2px;
+    background-color: #000;
+    font-size: 12px;
+    color: #cdbe91;
+}
+
+.new_hero_skin .pic_mask {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 133px;
+    padding: 0 17px 20px;
+    background: url(../images/pic-mask-0.png);
+}
+
+.new_hero_skin .hero_skin_intro {
+    margin-top: 75px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #cdbe91;
+}
+
+.new_hero_skin .hero_skin_name {
+    font-size: 14px;
+    color: #cfcfcf;
+}
+
+.new_hero:hover .hover_hero_mask{
+    display: block;
+}
+
+.new_hero .hover_hero_mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 402px;
+    height: 254px;
+    background: url(../images/dark70-bg-repeat.png);
+    animation: buttomIn .2s;
+}
+
+.new_hero .hover_hero_mask .hover_inner {
+    width: 396px;
+    height: 248px;
+    padding: 25px;
+    margin: 3px auto 0 auto;
+    background: url(../images/index-spr.png) no-repeat;
+}
+
+.hover_hero_mask .hover_hero_name {
+    font-size: 18px;
+    color: #cdbe91;
+}
+
+.hover_hero_mask .btn_more {
+    position: absolute;
+    bottom: 18px;
+    width: 154px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #ffdb8b;
+    background: url(../images/index-spr.png);
+    background-position: -401px -179px;
+    text-align: center;
+}
+
+.btn_more .arrow {
+    background-position: -362px -99px;
+}

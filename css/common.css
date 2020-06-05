@@ -305,17 +305,17 @@ header a[class^="icon"] {
     color: #FFF;
 }
 
-@keyframes flat_slide {
+@keyframes arrow_slide {
 
     0%,
     20%,
     50% {
-        background-position: -213px -126px;
+        transform: translateX(0px);
     }
 
     10%,
     30% {
-        background-position: -210px -126px;
+        transform: translateX(4px);
     }
 }
 
@@ -329,7 +329,7 @@ header a[class^="icon"] {
 }
 
 a:hover .arrow {
-    animation: flat_slide 1.5s linear infinite;
+    animation: arrow_slide 1.5s linear infinite;
 }
 
 .head_topact {
