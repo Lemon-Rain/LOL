@@ -729,7 +729,8 @@ main section.top_wrap .icon_new {
     animation: scale2 .3s;
 }
 
-.hover_skin_video {
+.hover_skin_video,
+.hover_version{
     display: none;
     position: absolute;
     top: -20px;
@@ -745,22 +746,22 @@ main section.top_wrap .icon_new {
     width: 434px;
 }
 
-.hover_skin_video .video_info {
+.info {
     height: 64px;
     padding: 11px 14px;
 }
 
-.hover_skin_video .video_title {
+.info .title {
     font-size: 16px;
     color: #0b0b0b;
 }
 
-.hover_skin_video .video_subtitle {
+.info .subtitle {
     font-size: 12px;
     color: #a1a1a2;
 }
 
-.hover_skin_video .video_more {
+.info .more {
     position: absolute;
     right: 10px;
     top: 18px;
@@ -772,7 +773,7 @@ main section.top_wrap .icon_new {
     transition: background-color .2s;
 }
 
-.hover_skin_video .video_more:hover {
+.info .more:hover {
     color: #fefefe;
     background-color: #bb9a6c;
 }
@@ -781,7 +782,7 @@ main section.top_wrap .icon_new {
     width: 496px;
     height: 254px;
     margin-top: 66px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .new_version li {
@@ -791,16 +792,70 @@ main section.top_wrap .icon_new {
 .new_version .version {
     width: 240px;
     height: 120px;
+    margin-right: 16px;
+    background: url(../images/version_img.jpg) no-repeat;
 }
 
 .new_version .development_log {
-    
+    width: 240px;
+    height: 180px;
+    margin-bottom: 16px;
+    background: url(../images/log_img.jpg) no-repeat;
 }
 
 .new_version .new_model {
-    
+    position: absolute;
+    top: 134px;
+    width: 240px;
+    height: 120px;
+    background: url(../images/model_img.jpg) no-repeat;
 }
 
 .new_version .week_free {
-    
+    float: right;
+    width: 240px;
+    height: 58px;
+    line-height: 58px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -192px -253px;
+    font-size: 16px;
+    transition: filter .5s;
+}
+
+.new_version .week_free a {
+    display: block;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.week_free:hover {
+    filter: brightness(1.15);
+}
+
+.week_free .icon_left,
+.week_free .icon_right {
+    display: inline-block;
+    width: 20px;
+    height: 9px;
+    background: url(../images/index-spr.png) no-repeat;
+}
+
+.week_free .icon_left {
+    margin-right: 12px;
+    background-position: -531px -226px;
+}
+
+.week_free .icon_right {
+    margin-left: 8px;
+    background-position: -506px -226px;
+}
+
+.week_free .arrow {
+    background-position: -342px -99px;
+}
+
+.hover_version {
+    display: block;
+    z-index: 10;
 }
