@@ -2,12 +2,14 @@ main {
     height: 1920px;
 }
 
-.top_wrap {
+.top_warp_vp {
+    background-color: #eee;
+}
+
+section {
     width: 1358px;
-    height: auto;
-    padding-top: 40px;
+    padding: 40px 0 80px 0;
     margin: 0 auto;
-    /* overflow: hidden; */
 }
 
 .promo {
@@ -800,7 +802,6 @@ main section.top_wrap .icon_new {
 .hover_version {
     width: 270px;
     height: 250px;
-    /* margin-left: 2px; */
     z-index: 10;
 }
 
@@ -914,22 +915,27 @@ main section.top_wrap .icon_new {
     background-position: -342px -99px;
 }
 
-.week_free:hover {}
+.hover_week_free.show {
+    filter: brightness(1);
+    display: block;
+}
 
 .hover_week_free {
+    display: none;
     position: absolute;
-    top: 71px;
+    top: 268px;
     right: 0;
-    padding: 8px 10px 5px 0;
+    padding: 14px 10px 2px 0;
     box-shadow: 0 0 20px #aaa;
     background-color: #fff;
-    overflow: hidden;
+    animation: topin .3s;
 }
 
 .hover_week_free .icon_triangle {
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: -7px;
+    left: 300px;
     width: 14px;
     height: 7px;
     background: url(../images/index-spr.png) no-repeat;
@@ -943,14 +949,72 @@ main section.top_wrap .icon_new {
 
 .free_hore_list .item {
     float: left;
-    margin: 0 0 8px 10px;
+    margin: 0 0 7px 10px;
     width: 50px;
     height: 50px;
-
+    cursor: pointer;
 }
 
 .free_hore_list .item img {
     width: 100%;
     border-radius: 32px;
     border: 2px solid #bb9a6d;
+}
+
+.more_skin {
+    height: 0;
+    /* margin-top: 0; */
+    transform: translateY(0);
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.more_skin#show {
+    height: 117px;
+    /* transform: scaleY(117px); */
+    /* margin-top: 44px; */
+    transform: translateY(44px);
+}
+
+.more_skin .item {
+    position: relative;
+    float: left;
+    width: 185px;
+    height: 117px;
+    margin-right: 10.5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.more_skin .item:last-child {
+    margin-right: 0;
+}
+
+.more_skin .item:hover .skin_img{
+    transform: scale(1.1);
+}
+
+.more_skin .item .skin_img {
+    width: 185px;
+    height: 117px;
+    transition: transform .2s;
+}
+
+.more_skin .item .skin_name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #cdbe91;
+    text-align: center;
+    background: url(../images/dark70-bg-repeat.png) repeat;
+}
+
+
+
+
+.two_wrap_vp {
+    background-color: #e3e2e2;
 }

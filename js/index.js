@@ -45,12 +45,27 @@ function searchOpen() {
     search.style.display = "block";
 }
 
+var sleep = function (time) {
+    var startTime = new Date().getTime() + parseInt(time, 10);
+    while (new Date().getTime() < startTime) {}
+};
+
 function display(name, model) {
     var el = document.querySelector(name);
     if (model == 'show') {
         el.style.display = "block";
     } else {
+        sleep(100);
         el.style.display = "none";
+    }
+}
+
+function show(name, model) {
+    var el = document.querySelector(name);
+    if (model == 'show') {
+        el.id = "show";
+    } else {
+        el.id = "";
     }
 }
 
