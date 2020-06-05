@@ -776,3 +776,31 @@ main section.top_wrap .icon_new {
     color: #fefefe;
     background-color: #bb9a6c;
 }
+
+.new_version {
+    width: 496px;
+    height: 254px;
+    margin-top: 66px;
+    background-color: pink;
+}
+
+.new_version li {
+    float: left;
+}
+
+.new_version .version {
+    width: 240px;
+    height: 120px;
+}
+
+.new_version .development_log {
+    
+}
+
+.new_version .new_model {
+    
+}
+
+.new_version .week_free {
+    
+}
