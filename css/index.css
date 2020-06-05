@@ -816,7 +816,7 @@ main section.top_wrap .icon_new {
     background: url(../images/log_img.jpg) no-repeat;
 }
 
-.development_log:hover .hover_mask{
+.development_log:hover .hover_mask {
     display: block;
 }
 
@@ -912,4 +912,45 @@ main section.top_wrap .icon_new {
 
 .week_free .arrow {
     background-position: -342px -99px;
+}
+
+.week_free:hover {}
+
+.hover_week_free {
+    position: absolute;
+    top: 71px;
+    right: 0;
+    padding: 8px 10px 5px 0;
+    box-shadow: 0 0 20px #aaa;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.hover_week_free .icon_triangle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 7px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -556px -226px;
+    z-index: 10;
+}
+
+.free_hore_list {
+    width: 420px;
+}
+
+.free_hore_list .item {
+    float: left;
+    margin: 0 0 8px 10px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.free_hore_list .item img {
+    width: 100%;
+    border-radius: 32px;
+    border: 2px solid #bb9a6d;
 }
