@@ -918,11 +918,6 @@ section {
     background-position: -342px -99px;
 }
 
-.hover_week_free.show {
-    filter: brightness(1);
-    display: block;
-}
-
 .hover_week_free {
     display: none;
     position: absolute;
@@ -932,6 +927,12 @@ section {
     box-shadow: 0 0 20px #aaa;
     background-color: #fff;
     animation: topin .3s;
+    z-index: 10;
+}
+
+.hover_week_free.show {
+    filter: brightness(1);
+    display: block;
 }
 
 .hover_week_free .icon_triangle {
@@ -1140,7 +1141,7 @@ section {
 
 .video_info {
     width: 100%;
-    padding: 10px 11px 0;
+    padding: 10px 10px 0;
 }
 
 .play_count,
@@ -1165,6 +1166,7 @@ section {
 
 .hot_album .tab {
     width: 367px;
+    border-color: #d6d7d8;
 }
 
 .hot_album .tab .item {
@@ -1175,9 +1177,19 @@ section {
     margin-right: 0;
 }
 
+.hot_album .tab_content {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
 .hot_album .content_item {
+    display: none;
     width: 2736px;
     height: 337px;
+}
+
+.hot_album .content_item.selected {
+    display: block;
 }
 
 .hot_album .album_item {
@@ -1185,10 +1197,108 @@ section {
     width: 171px;
     height: 100%;
     padding-right: 15px;
-    background-color: pink;
-    
+
+}
+
+.hot_album .album_name,
+.hot_album .update_date {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fff;
 }
 
 .album_img {
     width: 156px;
+}
+
+.hot_album .album_name {
+    top: 143px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.hot_album .update_date {
+    top: 170px;
+    font-size: 12px;
+}
+
+.hot_album .album_title,
+.autor {
+    display: inline-block;
+    padding: 12px 6px 0px;
+    height: 44px;
+    box-sizing: content-box;
+    font-size: 14px;
+    color: #919091;
+}
+
+.album_title:hover {
+    color: #0da0b4;
+}
+
+.autor {
+    padding-left: 5px;
+}
+
+.autor_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    border-radius: 15px;
+}
+
+.autor_name {
+    font-size: 12px;
+}
+
+.autor_name:hover {
+    color: #0da0b4;
+}
+
+.btn_more {
+    display: block;
+    width: 506px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: -5px;
+    font-size: 16px;
+    color: #ab8e66;
+    text-align: center;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: 0 -522px;
+}
+
+.btn_more:hover {
+    filter: brightness(1.08);
+}
+
+.btn_more .arrow {
+    height: 10px;
+}
+
+.btn_left,
+.btn_right {
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 51px;
+    background: url(../images/index-spr.png) no-repeat;
+}
+
+.btn_left:hover,
+.btn_right:hover {
+    filter: brightness(1.07);
+}
+
+.btn_left {
+    top: 154px;
+    left: -29px;
+    background-position: -221px -397px;
+}
+
+.btn_right {
+    top: 154px;
+    right: -29px;
+    background-position: -193px -397px;
 }
