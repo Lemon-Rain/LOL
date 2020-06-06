@@ -1223,8 +1223,9 @@ section {
 
 .hot_album .content_item {
     display: none;
-    width: 2736px;
+    width: 1881px;
     height: 337px;
+    overflow: hidden;
 }
 
 .hot_album .content_item.selected {
@@ -1242,7 +1243,7 @@ section {
 .hot_album .album_name,
 .hot_album .update_date {
     position: absolute;
-    width: 100%;
+    width: 156px;
     text-align: center;
     color: #fff;
 }

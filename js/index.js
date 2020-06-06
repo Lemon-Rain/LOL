@@ -139,9 +139,28 @@ function update_progress(event, el) {
             var src = img.getAttribute('src');
             src = src.substr(0, 23) + index + src.substr(24, src.length);
             img.src = src;
-            // console.log(src);
         }
     }
-    // console.log('X:' + X + '  index:' + index);
+}
 
+// window.onload = function () {
+//     var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
+//     // console.log(ul_list);
+//     for (var i = 0; i < ul_list.length; i++) {
+//         // console.log(ul_list[i]);
+//         var lis = ul_list[i].querySelectorAll('li');
+//         // console.log(lis);
+//         ul_list[i].appendChild('<h3>');
+//         console.log(ul_list[i]);
+
+//     }
+
+// }
+
+window.onload = function () {
+    var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
+    for (var i = 0; i < ul_list.length; i++) {
+        var lis = ul_list[i].querySelectorAll('li');
+        console.log(lis.length);
+    }
 }
