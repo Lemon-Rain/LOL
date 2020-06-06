@@ -1134,10 +1134,11 @@ section {
     font-size: 14px;
     color: #424242;
     word-wrap: unset;
+    cursor: pointer;
     overflow: hidden;
 }
 
-.videw_info {
+.video_info {
     width: 100%;
     padding: 10px 11px 0;
 }
@@ -1155,4 +1156,39 @@ section {
 
 .pub_date {
     float: right;
+}
+
+.hot_album {
+    width: 496px;
+    height: 454px;
+}
+
+.hot_album .tab {
+    width: 367px;
+}
+
+.hot_album .tab .item {
+    margin-right: 14px;
+}
+
+.hot_album .tab .item:last-child {
+    margin-right: 0;
+}
+
+.hot_album .content_item {
+    width: 2736px;
+    height: 337px;
+}
+
+.hot_album .album_item {
+    float: left;
+    width: 171px;
+    height: 100%;
+    padding-right: 15px;
+    background-color: pink;
+    
+}
+
+.album_img {
+    width: 156px;
 }

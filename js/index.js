@@ -102,6 +102,18 @@ function Rotate() {
 }
 
 function select(name, n) {
+    if (name == '.new_video') {
+        var a = document.querySelector(name).querySelector('.change_batch');
+        var span = a.querySelector('span');
+        var i = a.querySelector('i');
+        if (n == 0) {
+            span.innerText = '换一批'
+            i.className = 'icon_refresh'
+        } else {
+            span.innerText = '下一页'
+            i.className = 'icon_next'
+        }
+    }
     var tabList = document.querySelector(name).querySelector('.tab').querySelectorAll('.item');
     var contentList = document.querySelector(name).querySelector('.tab_content').querySelectorAll('.content_item')
     for (var i = 0; i < tabList.length; i++) {
