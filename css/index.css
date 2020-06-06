@@ -1115,6 +1115,7 @@ section {
 .new_video .video_mask {
     height: 107px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .video_mask .video_len {
@@ -1130,6 +1131,10 @@ section {
     height: 110px;
 }
 
+.new_video .content_item li:hover .video_title {
+    color: #0da0b4;
+}
+
 .video_title {
     height: 42px;
     font-size: 14px;
@@ -1142,6 +1147,40 @@ section {
 .video_info {
     width: 100%;
     padding: 10px 10px 0;
+}
+
+.video-pre-wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.new_video .content_item li:hover .video-pre-wrap {
+    display: block;
+}
+
+.video-pre-wrap .video_pre_img {
+    width: 100%;
+}
+
+.progress_bar,
+.progress_bar_inner {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    height: 4px;
+    background-color: #fff;
+}
+
+.progress_bar {
+    width: 184px;
+    opacity: .5;
+}
+
+.progress_bar_inner {
+    width: 0px;
+    transition: width .1s;
 }
 
 .play_count,

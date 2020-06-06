@@ -126,3 +126,22 @@ function select(name, n) {
         }
     }
 }
+
+function update_progress(event, el) {
+    var max_index = 8;
+    var progress = el.querySelector('.progress_bar_inner');
+    var img = el.querySelector('.video_pre_img');
+    var X = event.clientX - el.offsetLeft - 4;
+    var index = Math.ceil(X / 23);
+    if (index <= max_index) {
+        progress.style.width = index * 23 + 'px';
+        if (index != 0) {
+            var src = img.getAttribute('src');
+            src = src.substr(0, 23) + index + src.substr(24, src.length);
+            img.src = src;
+            // console.log(src);
+        }
+    }
+    // console.log('X:' + X + '  index:' + index);
+
+}
