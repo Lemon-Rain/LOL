@@ -114,15 +114,36 @@ function select(name, n) {
             i.className = 'icon_next'
         }
     }
+    if (name == '.hot_album') {
+        var wrapper = document.querySelector('.hot_album').querySelector(".swiper-wrapper.selected");
+        wrapper.removeChild(wrapper.firstChild);
+        wrapper.removeChild(wrapper.firstChild);
+        wrapper.removeChild(wrapper.firstChild);
+        wrapper.removeChild(wrapper.lastChild);
+        wrapper.removeChild(wrapper.lastChild);
+        wrapper.removeChild(wrapper.lastChild);
+        this.programSwiper.destroy();
+        this.programSwiper = new Swiper('#swiper' + (n + 1), {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            autoplay: 3000,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            simulateTouch: false,
+        });
+        //左右按钮
+        document.querySelector('.btn_left').onclick = this.programSwiper.swipePrev;
+        document.querySelector('.btn_right').onclick = this.programSwiper.swipeNext;
+    }
     var tabList = document.querySelector(name).querySelector('.tab').querySelectorAll('.item');
     var contentList = document.querySelector(name).querySelector('.tab_content').querySelectorAll('.content_item')
     for (var i = 0; i < tabList.length; i++) {
         if (i == n) {
             tabList[i].className = 'item selected';
-            contentList[i].className = 'content_item selected';
+            contentList[i].className = 'content_item selected swiper-wrapper';
         } else {
             tabList[i].className = 'item';
-            contentList[i].className = 'content_item';
+            contentList[i].className = 'content_item swiper-wrapper';
         }
     }
 }
@@ -144,6 +165,17 @@ function update_progress(event, el) {
 }
 
 window.onload = function () {
+    this.programSwiper = new Swiper('#swiper1', {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        simulateTouch: false,
+    });
+    //左右按钮
+    document.querySelector('.btn_left').onclick = this.programSwiper.swipePrev;
+    document.querySelector('.btn_right').onclick = this.programSwiper.swipeNext;
     var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
@@ -152,14 +184,3 @@ window.onload = function () {
         console.log(ul_list[i].style.width);
     }
 }
-
-var mySwiper = new Swiper ('.swiper-container', {
-	autoplay: true,//可选选项，自动滑动
-    loop: true, // 循环模式选项
-
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })

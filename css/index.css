@@ -1199,7 +1199,7 @@ section {
 }
 
 .hot_album {
-    width: 496px;
+    width: 495px;
     height: 454px;
 }
 
@@ -1218,17 +1218,15 @@ section {
 
 .hot_album .tab_content {
     margin-top: 30px;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 513px;
 }
 
 .hot_album .content_item {
     display: none;
-    /* width: 1881px; */
-    height: 337px;
-    margin-left: -513px;
-    /* transform: translateX(1000px); */
-    overflow: hidden;
-    transition: margin .3s;
 }
 
 .hot_album .content_item.selected {
@@ -1249,7 +1247,6 @@ section {
     width: 156px;
     text-align: center;
     color: #fff;
-    /* transform: translateY(); */
 }
 
 .album_img {
@@ -1328,6 +1325,7 @@ section {
     width: 23px;
     height: 51px;
     background: url(../images/index-spr.png) no-repeat;
+    outline: none;
 }
 
 .btn_left:hover,
