@@ -1218,14 +1218,17 @@ section {
 
 .hot_album .tab_content {
     margin-top: 30px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .hot_album .content_item {
     display: none;
-    width: 1881px;
+    /* width: 1881px; */
     height: 337px;
+    margin-left: -513px;
+    /* transform: translateX(1000px); */
     overflow: hidden;
+    transition: margin .3s;
 }
 
 .hot_album .content_item.selected {
@@ -1246,6 +1249,7 @@ section {
     width: 156px;
     text-align: center;
     color: #fff;
+    /* transform: translateY(); */
 }
 
 .album_img {

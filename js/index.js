@@ -143,24 +143,23 @@ function update_progress(event, el) {
     }
 }
 
-// window.onload = function () {
-//     var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
-//     // console.log(ul_list);
-//     for (var i = 0; i < ul_list.length; i++) {
-//         // console.log(ul_list[i]);
-//         var lis = ul_list[i].querySelectorAll('li');
-//         // console.log(lis);
-//         ul_list[i].appendChild('<h3>');
-//         console.log(ul_list[i]);
-
-//     }
-
-// }
-
 window.onload = function () {
     var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
-        console.log(lis.length);
+        var n = lis.length;
+        ul_list[i].style.width = n * 171 + 'px'
+        console.log(ul_list[i].style.width);
     }
 }
+
+var mySwiper = new Swiper ('.swiper-container', {
+	autoplay: true,//可选选项，自动滑动
+    loop: true, // 循环模式选项
+
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
