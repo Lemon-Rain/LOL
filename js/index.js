@@ -115,7 +115,7 @@ function select(name, n) {
         }
     }
     if (name == '.hot_album') {
-        var wrapper = document.querySelector('.hot_album').querySelector(".swiper-wrapper.selected");
+        var wrapper = document.querySelector('.hot_album').querySelector(".content_item.selected").querySelector('.swiper-wrapper');
         wrapper.removeChild(wrapper.firstChild);
         wrapper.removeChild(wrapper.firstChild);
         wrapper.removeChild(wrapper.firstChild);
@@ -135,15 +135,31 @@ function select(name, n) {
         document.querySelector('.btn_left').onclick = this.programSwiper.swipePrev;
         document.querySelector('.btn_right').onclick = this.programSwiper.swipeNext;
     }
+
+    if (name == '.match_center' && n != 1) {
+        var i = n == 0 ? 0 : 1;
+        console.log("i:" + i);
+
+        this.programSwiper2.destroy();
+        this.programSwiper2 = new Swiper('#swiper' + (i + 8), {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            autoplayDisableOnInteraction: false,
+        });
+        //左右按钮
+        document.querySelector('.btn_match_left').onclick = this.programSwiper2.swipePrev;
+        document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
+    }
+
     var tabList = document.querySelector(name).querySelector('.tab').querySelectorAll('.item');
     var contentList = document.querySelector(name).querySelector('.tab_content').querySelectorAll('.content_item')
     for (var i = 0; i < tabList.length; i++) {
         if (i == n) {
             tabList[i].className = 'item selected';
-            contentList[i].className = 'content_item selected swiper-wrapper';
+            contentList[i].className = 'swiper-container content_item selected';
         } else {
             tabList[i].className = 'item';
-            contentList[i].className = 'content_item swiper-wrapper';
+            contentList[i].className = 'swiper-container content_item';
         }
     }
 }
@@ -173,14 +189,46 @@ window.onload = function () {
         loop: true,
         simulateTouch: false,
     });
-    //左右按钮
     document.querySelector('.btn_left').onclick = this.programSwiper.swipePrev;
     document.querySelector('.btn_right').onclick = this.programSwiper.swipeNext;
-    var ul_list = document.querySelector('.hot_album').querySelectorAll('.content_item');
+
+    this.programSwiper2 = new Swiper('#swiper8', {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        autoplayDisableOnInteraction: false,
+    });
+    document.querySelector('.btn_match_left').onclick = this.programSwiper2.swipePrev;
+    document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
+
+    this.rankSwiper = new Swiper('#swiper9', {
+        // scrollContainer: true,
+        slidesPerView: 5,
+        mode: 'vertical',
+        freeMode: true,
+        freeModeFluid: true,
+        preventLinks: true,
+        grabCursor: true,
+        cssWidthAndHeight: true,
+        mousewheelControl: true,
+        scrollbar: {
+            container: '.scroll_bar',
+            hide: false,
+            draggable: true
+        }
+    });
+
+    var ul_list = document.querySelector('.hot_album').querySelectorAll('.swiper-wrapper');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
         var n = lis.length;
         ul_list[i].style.width = n * 171 + 'px'
+        console.log(ul_list[i].style.width);
+    }
+    var ul_list = document.querySelector('.match_center').querySelectorAll('.swiper-wrapper');
+    for (var i = 0; i < ul_list.length; i++) {
+        var lis = ul_list[i].querySelectorAll('li');
+        var n = lis.length;
+        ul_list[i].style.width = n * 275 + 'px'
         console.log(ul_list[i].style.width);
     }
 }
