@@ -146,9 +146,29 @@ function select(name, n) {
             slidesPerGroup: 5,
             autoplayDisableOnInteraction: false,
         });
-        //左右按钮
-        document.querySelector('.btn_match_left').onclick = this.programSwiper2.swipePrev;
-        document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
+        document.querySelector('#swiper' + (i + 8) + ' .btn_match_left').onclick = this.programSwiper2.swipePrev;
+        document.querySelector('#swiper' + (i + 8) + ' .btn_match_right').onclick = this.programSwiper2.swipeNext;
+
+        var bar = document.querySelector('#swiper' + (i + 10) + ' .swiper-scrollbar');
+        bar.innerHTML = '';
+        this.rankSwiper.destroy();
+        this.rankSwiper = new Swiper('#swiper' + (i + 10), {
+            scrollContainer: true,
+            mode: 'vertical',
+            freeMode: true,
+            freeModeFluid: true,
+            preventLinks: true,
+            grabCursor: true,
+            // cssWidthAndHeight: true,
+            mousewheelControl: true,
+            scrollbar: {
+                container: '#swiper' + (i + 10) + ' .swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: true
+            }
+        });
+        scrollbarInit(this.rankSwiper);
     }
 
     var tabList = document.querySelector(name).querySelector('.tab').querySelectorAll('.item');
@@ -162,6 +182,14 @@ function select(name, n) {
             contentList[i].className = 'swiper-container content_item';
         }
     }
+}
+
+
+function scrollbarInit(el) {
+    initTimer = setTimeout(function () {
+        el.reInit();
+        el.resizeFix();
+    }, 100);
 }
 
 function update_progress(event, el) {
@@ -197,8 +225,8 @@ window.onload = function () {
         slidesPerGroup: 5,
         autoplayDisableOnInteraction: false,
     });
-    document.querySelector('.btn_match_left').onclick = this.programSwiper2.swipePrev;
-    document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
+    document.querySelector('#swiper8 .btn_match_left').onclick = this.programSwiper2.swipePrev;
+    document.querySelector('#swiper8 .btn_match_right').onclick = this.programSwiper2.swipeNext;
 
     this.rankSwiper = new Swiper('#swiper10', {
         scrollContainer: true,
@@ -210,7 +238,7 @@ window.onload = function () {
         cssWidthAndHeight: true,
         mousewheelControl: true,
         scrollbar: {
-            container: '.swiper-scrollbar',
+            container: '#swiper10 .swiper-scrollbar',
             hide: false,
             draggable: true,
             snapOnRelease: true
