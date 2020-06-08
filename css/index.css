@@ -1472,7 +1472,7 @@ section {
     font-weight: 700;
 }
 
-.team {
+.match_item .team {
     position: absolute;
     top: 47px;
     width: 85px;
@@ -1495,7 +1495,7 @@ section {
     right: 6px;
 }
 
-.score {
+.match_item .score {
     width: 100%;
     margin: 32px auto 10px auto;
     text-align: center;
@@ -1784,7 +1784,7 @@ section {
 .match_part_name {
     height: 35px;
     line-height: 35px;
-    font-style: 16px;
+    font-size: 16px;
     font-weight: 700;
     color: #29a2b4;
     padding-left: 1px;
@@ -1799,11 +1799,12 @@ section {
 
 .match_info .match_status {
     display: inline-block;
+    height: 15px;
+    line-height: 15px;
     padding: 0 2px;
-    margin-top: 3px;
-    font-size: 12px;
-    color: #ffffff;
+    border-radius: 2px;
     background-color: #bcbcbc;
+    color: #fff;
 }
 
 .match_info .match_date {
@@ -1816,18 +1817,22 @@ section {
 .match_info .bt_video {
     display: inline-block;
     height: 20px;
-    line-height: 16px;
+    line-height: 18px;
     margin-left: 10px;
     padding: 0 6px;
     border: 1px solid;
     font-size: 14px;
 }
 
-
 .match_info .bt_data {
     float: right;
     color: #7ea1a6;
     border-color: #7ea1a6;
+}
+
+.match_info .bt_data:hover {
+    background-color: #7ea1a6;
+    color: #ffffff;
 }
 
 .match_info .bt_video {
@@ -1836,6 +1841,68 @@ section {
     border-color: #bb9a6c;
 }
 
+.match_info .bt_video:hover {
+    background-color: #bb9a6c;
+    color: #ffffff;
+}
+
+.team_wrap {
+    margin-bottom: 39px;
+}
+
 .team_wrap .team {
-    height: 40px;
+    width: 268px;
+    height: 44px;
+    background-color: #f6f6f6;
+    margin-bottom: 1px;
+}
+
+.team_wrap .team_img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 5px 11px;
+}
+
+.team_wrap .team_name {
+    font-size: 16px;
+    color: #676767;
+    margin-left: 8px;
+    line-height: 44px;
+}
+
+.team_wrap .score {
+    float: right;
+    width: 23px;
+    height: 44px;
+    line-height: 44px;
+    background-color: #bcbcbc;
+    font-size: 16px;
+    font-family: tttgbnumber;
+    color: #fff;
+    text-align: center;
+
+}
+
+.team_wrap .team.win .score {
+    background-color: #86a2ad;
+}
+
+.playoffs .link {
+    width: 85px;
+    height: 156px;
+    margin-top: 106px;
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+.icon_link {
+    width: 110px;
+    height: 155px;
+    margin-top: 106px;
+    background: url(../images/events-spr.png) no-repeat;
+    background-position: 0 -452px;
+}
+
+.list_col.over {
+    margin-top: 77px;
 }
