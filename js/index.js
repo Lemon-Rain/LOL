@@ -200,7 +200,7 @@ window.onload = function () {
     document.querySelector('.btn_match_left').onclick = this.programSwiper2.swipePrev;
     document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
 
-    this.rankSwiper = new Swiper('#swiper9', {
+    this.rankSwiper = new Swiper('#swiper10', {
         scrollContainer: true,
         mode: 'vertical',
         freeMode: true,
