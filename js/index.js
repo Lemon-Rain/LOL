@@ -201,8 +201,7 @@ window.onload = function () {
     document.querySelector('.btn_match_right').onclick = this.programSwiper2.swipeNext;
 
     this.rankSwiper = new Swiper('#swiper9', {
-        // scrollContainer: true,
-        slidesPerView: 5,
+        scrollContainer: true,
         mode: 'vertical',
         freeMode: true,
         freeModeFluid: true,
@@ -211,9 +210,10 @@ window.onload = function () {
         cssWidthAndHeight: true,
         mousewheelControl: true,
         scrollbar: {
-            container: '.scroll_bar',
+            container: '.swiper-scrollbar',
             hide: false,
-            draggable: true
+            draggable: true,
+            snapOnRelease: true
         }
     });
 
