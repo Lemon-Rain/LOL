@@ -245,6 +245,20 @@ window.onload = function () {
         }
     });
 
+    this.rankSwiper = new Swiper('#swiper12', {
+        scrollContainer: true,
+        mode: 'vertical',
+        preventLinks: true,
+        grabCursor: true,
+        cssWidthAndHeight: true,
+        mousewheelControl: true,
+        scrollbar: {
+            container: '.hero_centainer>.scrollbar',
+            hide: false,
+            draggable: true
+        }
+    });
+
     var ul_list = document.querySelector('.hot_album').querySelectorAll('.swiper-wrapper');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
@@ -259,4 +273,19 @@ window.onload = function () {
         ul_list[i].style.width = n * 275 + 'px'
         console.log(ul_list[i].style.width);
     }
+}
+
+function selectHeroType(n) {
+    var tabList = document.querySelectorAll('hero_type_tab .item');
+    var contentList = document.querySelectorAll('.hero_wrapper');
+    for (var i = 0; i < tabList.length; i++) {
+        if (i == n) {
+            tabList[i].className = 'item selected';
+            contentList[i].className = 'hero_wrapper swiper-wrapper selected';
+        } else {
+            tabList[i].className = 'item';
+            contentList[i].className = 'hero_wrapper swiper-wrapper';
+        }
+    }
+
 }

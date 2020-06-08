@@ -1348,9 +1348,13 @@ section {
     background-position: -193px -397px;
 }
 
-.match_wrap {
-    height: 1000px;
+.match_wrap_bg {
     padding: 64px 0 80px 0;
+}
+
+.match_wrap {
+    /* height: 1000px; */
+    /* overflow: hidden; */
 }
 
 .match_center {
@@ -1366,7 +1370,6 @@ section {
 }
 
 .match_center .tab_content {
-    height: 549px;
     padding-top: 26px;
     animation: opacityin .3s;
 }
@@ -1402,7 +1405,7 @@ section {
     background-color: #fefefe;
 }
 
-.match_center .tab_content>.swiper-container {
+.match_center .tab_content>div.swiper-container {
     width: 1375px !important;
     overflow: hidden;
 }
@@ -1410,6 +1413,10 @@ section {
 .match_center .tab_content>.swiper-container>.swiper-wrapper {
     height: 198px !important;
     cursor: grab;
+}
+
+ul.swiper-container {
+    height: 418px;
 }
 
 .match_center .topbar {
@@ -1737,7 +1744,7 @@ section {
     height: auto;
 }
 
-.rank_content:hover .scroll_bar_inner{
+.rank_content:hover .scroll_bar_inner {
     width: 8px;
     border-radius: 4px;
 }
@@ -1766,7 +1773,7 @@ section {
     cursor: n-resize;
 }
 
-.score_rank .swiper-container:hover .swiper-scrollbar{
+.score_rank .swiper-container:hover .swiper-scrollbar {
     width: 8px;
     border-radius: 4px;
 }
@@ -1905,4 +1912,163 @@ section {
 
 .list_col.over {
     margin-top: 77px;
+}
+
+.hero_wrap_bg {
+    background-color: #e3e2e2;
+    padding: 66px 0;
+    overflow: hidden;
+}
+
+section.hero_wrap {
+    padding: 0;
+}
+
+.hero_data .top_tab {
+    width: 1358px;
+}
+
+.hero_data .tab {
+    float: right;
+    width: 1230px;
+    line-height: 40px;
+}
+
+.hero_data .hero_type_tab .item {
+    position: relative;
+    min-width: 68px;
+    padding-left: 28px;
+    margin-right: 40px;
+}
+
+.hero_data .item::before {
+    content: '\0020';
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 3px;
+    width: 20px;
+    height: 19px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -407px -316px;
+}
+
+.hero_data .item:hover::before {
+    background-position: -431px -316px;
+    animation: scalein-2 .2s;
+}
+
+.hero_data .item:hover {
+    font-weight: 700;
+    color: #1da6ba;
+}
+
+.hero_centainer {
+    position: relative;
+    width: 1395px;
+    height: 438px;
+    margin-top: 21px !important;
+    overflow: hidden;
+}
+
+.hero_wrapper {
+    display: none;
+    overflow: hidden;
+}
+
+.hero_wrapper.selected {
+    display: block;
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.hero_item {
+    float: left;
+    width: 90px;
+    height: 100px;
+    margin: 0 16px 12px 0;
+    cursor: pointer;
+}
+
+.hero_item .hero_img {
+    display: block;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto;
+}
+
+.hero_item .hero_name {
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.hero_centainer .scrollbar {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 23px;
+    width: 5px;
+    height: 100%;
+    transition: width .2s;
+}
+
+.hero_centainer:hover .scrollbar {
+    width: 10px;
+    transition: width .2s;
+}
+
+.swiper-scrollbar-drag {
+    cursor: n-resize !important;
+}
+
+.scrollbar>.swiper-scrollbar-drag {
+    width: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #abc0c3;
+}
+
+.hero_hoevr_mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 66px;
+    height: 66px;
+    background: url(../images/dark70-bg-repeat.png) repeat;
+    animation: opacityin .2s;
+}
+
+.hero_item:hover .hero_hoevr_mask {
+    display: block;
+}
+
+.hero_item:hover .hero_name {
+    color: #1da6ba;
+}
+
+.hero_hoevr_mask .icon_search {
+    display: block;
+    width: 22px;
+    height: 21px;
+    margin: 24px auto ;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -401px -226px;
+}
+
+/* .hero_wrapper.selected  */
+
+.hero_type_tab .item.selected::before{
+    background-position: -431px -316px;
+}
+
+.hero_type_tab .item:after {
+    background: none;
 }
