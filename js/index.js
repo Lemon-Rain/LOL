@@ -159,7 +159,7 @@ function select(name, n) {
             freeModeFluid: true,
             preventLinks: true,
             grabCursor: true,
-            // cssWidthAndHeight: true,
+            cssWidthAndHeight: true,
             mousewheelControl: true,
             scrollbar: {
                 container: '#swiper' + (i + 10) + ' .swiper-scrollbar',
@@ -241,7 +241,7 @@ window.onload = function () {
             container: '#swiper10 .swiper-scrollbar',
             hide: false,
             draggable: true,
-            snapOnRelease: true
+            // snapOnRelease: true
         }
     });
 
