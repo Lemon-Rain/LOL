@@ -382,3 +382,72 @@ a:hover .arrow {
     filter: brightness(1.15);
 }
 
+
+footer {
+    display: block;
+    width: 100%;
+    min-width: 1230px;
+    padding: 45px 0;
+    background-color: #e3e2e2;
+    color: #9f9378;
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.footer_inner {
+    max-width: 1358px;
+    min-width: 1230px;
+    padding: 15 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.foot_left.fl {
+    margin: 47px 0 0 33px;
+}
+
+.logo_left {
+    display: inline-block;
+    width: 189px;
+    height: 34px;
+    margin-right: 40px;
+    background: url(../images/topfoot-spr.png) no-repeat;
+    background-position: -216px 0;
+}
+
+.logo_right {
+    display: inline-block;
+    width: 82px;
+    height: 28px;
+    background: url(../images/topfoot-spr.png) no-repeat;
+    background-position: -216px -84px;
+}
+
+.foot_right .link {
+    font-size: 0;
+}
+
+.foot_right a,
+.foot_right span {
+    font-size: 12px;
+    color: #9f9378;
+}
+
+.foot_right a:hover {
+    text-decoration: underline;
+}
+
+.foot_right .link span {
+    margin: 0 1px;
+}
+
+.gswj_img {
+    width: 15px;
+    height: 15px;
+}
+
+.copyright {
+    font-size: 10px;
+    font-family: "微软雅黑";
+}
