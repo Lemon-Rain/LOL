@@ -2058,17 +2058,131 @@ section.hero_wrap {
     display: block;
     width: 22px;
     height: 21px;
-    margin: 24px auto ;
+    margin: 24px auto;
     background: url(../images/index-spr.png) no-repeat;
     background-position: -401px -226px;
 }
 
-/* .hero_wrapper.selected  */
-
-.hero_type_tab .item.selected::before{
+.hero_type_tab .item.selected::before {
     background-position: -431px -316px;
 }
 
 .hero_type_tab .item:after {
     background: none;
+}
+
+.fan_wrap_bg {
+    background-color: #eee;
+}
+
+.fanart .top_tab {
+    width: 820px;
+    line-height: 35px;
+}
+
+.fanart_container_left {
+    width: 840px;
+    margin-top: 21px;
+}
+
+.fanart_item {
+    float: left;
+    position: relative;
+    width: 192px;
+    height: 172px;
+    margin: 0 17px 17px 0;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.fanart_img {
+    position: absolute;
+    top: -12px;
+    width: 192px;
+    height: 192px;
+    transition: transform .3s;
+}
+
+.fanart_item:hover .fanart_img {
+    transform: scale(1.3);
+}
+
+.hover_fanart {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 8px 6px 10px;
+    background: url(../images/dark70-bg-repeat.png) repeat;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.fanart_item:hover .hover_fanart {
+    transform: translateY(0%);
+}
+
+.fanart_title {
+    padding: 11px 0 11px 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fanart_title:hover {
+    text-decoration: underline;
+}
+
+.fanart_info {
+    height: 20px;
+}
+
+.author_img {
+    width: 22px;
+    height: 22px;
+    margin-top: -8px;
+    border-radius: 50%;
+}
+
+.author_name,
+.number {
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+.icon_666 {
+    display: inline-block;
+    width: 23px;
+    height: 17px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -456px -226px;
+    vertical-align: text-bottom;
+}
+
+.like_666 {
+    float: right;
+}
+
+.like_666:hover .icon_666 {
+    background-position: -428px -226px;
+}
+
+.like_666:hover .number {
+    color: #ffffff;
+}
+
+.author_info {
+    float: left;
+}
+
+.author_info:hover .author_name {
+    color: #ffffff;
+}
+
+.fanart_container_right {
+    width: 496px;
+}
+
+.main_column {
+    margin-top: -5px;
 }
