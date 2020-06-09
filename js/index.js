@@ -189,7 +189,8 @@ function scrollbarInit(el) {
     initTimer = setTimeout(function () {
         el.reInit();
         el.resizeFix();
-    }, 100);
+        el.resize();
+    }, 200);
 }
 
 function update_progress(event, el) {
@@ -245,7 +246,7 @@ window.onload = function () {
         }
     });
 
-    this.rankSwiper = new Swiper('#swiper12', {
+    this.heroSwiper = new Swiper('#swiper12', {
         scrollContainer: true,
         mode: 'vertical',
         preventLinks: true,
@@ -276,7 +277,7 @@ window.onload = function () {
 }
 
 function selectHeroType(n) {
-    var tabList = document.querySelectorAll('hero_type_tab .item');
+    var tabList = document.querySelectorAll('.hero_type_tab .item');
     var contentList = document.querySelectorAll('.hero_wrapper');
     for (var i = 0; i < tabList.length; i++) {
         if (i == n) {
@@ -284,8 +285,29 @@ function selectHeroType(n) {
             contentList[i].className = 'hero_wrapper swiper-wrapper selected';
         } else {
             tabList[i].className = 'item';
-            contentList[i].className = 'hero_wrapper swiper-wrapper';
+            contentList[i].className = 'hero_wrapper';
         }
     }
-
+    document.querySelector('.hero_centainer .scrollbar').innerHTML = '';
+    this.heroSwiper.destroy();
+    this.heroSwiper = new Swiper('#swiper12', {
+        scrollContainer: true,
+        mode: 'vertical',
+        preventLinks: true,
+        grabCursor: true,
+        cssWidthAndHeight: true,
+        mousewheelControl: true,
+        scrollbar: {
+            container: '.hero_centainer>.scrollbar',
+            hide: false,
+            draggable: true
+        }
+    });
+    scrollbarInit(this.heroSwiper);
 }
+
+// function Init() {
+//     this.heroSwiper.reInit();
+//     this.heroSwiper.resizeFix();
+//     this.heroSwiper.resize();
+// }
