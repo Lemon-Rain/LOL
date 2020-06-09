@@ -16,12 +16,73 @@ function resize() {
 }
 
 window.onresize = resize;
-
 window.onload = resize;
+window.onload = window.onscroll;
+
+function toScroll(n) {
+    window.scrollTo({
+        top: n,
+        behavior: "smooth",
+    });
+}
+
+function fun() {
+    var polo = document.querySelector('.top_nav');
+    polo.className = 'top_nav show'
+}
 
 window.onscroll = function () {
-    if (window.scrollY > 50) {
+    var Y = window.scrollY;
+    var bar = this.document.querySelector('.rightnav_bar');
+    var polo = document.querySelector('.top_nav');
+
+    if (Y > 50) {
         document.querySelector("header").className = "small pr";
+    }
+    console.log('当前距离顶部' + Y + 'px');
+
+    if (Y >= 300) {
+        bar.style.height = '364px';
+        if (document.querySelector('.top_nav.show') == null) {
+            setTimeout(function () {
+                polo.className = 'top_nav show'
+            }, 100);
+        }
+    } else {
+        bar.style.height = '304px';
+        if (document.querySelector('.top_nav.show') != null) {
+            setTimeout(function () {
+                polo.className = 'top_nav'
+            }, 600);
+        }
+    }
+
+    var nav_list = document.querySelectorAll('.rightnav_bar li');
+    if (Y < 300) {
+        clearClass(nav_list, -1);
+    } else if (Y >= 300 && Y < 1200) {
+        nav_list[0].classList.add('on');
+        clearClass(nav_list, 0);
+    } else if (Y >= 1200 && Y < 1700) {
+        nav_list[1].classList.add('on');
+        clearClass(nav_list, 1);
+    } else if (Y >= 1700 && Y < 2500) {
+        nav_list[2].classList.add('on');
+        clearClass(nav_list, 2);
+    } else if (Y >= 2500 && Y < 3100) {
+        nav_list[3].classList.add('on');
+        clearClass(nav_list, 3);
+    } else if (Y >= 3100) {
+        nav_list[4].classList.add('on');
+        clearClass(nav_list, 4);
+    }
+}
+
+function clearClass(list, n) {
+    for (var i = 0; i < list.length; i++) {
+        if (i != n) {
+            list[i].classList.remove('on');
+        }
     }
 }
 
@@ -138,7 +199,7 @@ function select(name, n) {
 
     if (name == '.match_center' && n != 1) {
         var i = n == 0 ? 0 : 1;
-        console.log("i:" + i);
+        // console.log("i:" + i);
 
         this.programSwiper2.destroy();
         this.programSwiper2 = new Swiper('#swiper' + (i + 8), {
@@ -279,14 +340,14 @@ window.onload = function () {
         var lis = ul_list[i].querySelectorAll('li');
         var n = lis.length;
         ul_list[i].style.width = n * 171 + 'px'
-        console.log(ul_list[i].style.width);
+        // console.log(ul_list[i].style.width);
     }
     var ul_list = document.querySelector('.match_center').querySelectorAll('.swiper-wrapper');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
         var n = lis.length;
         ul_list[i].style.width = n * 275 + 'px'
-        console.log(ul_list[i].style.width);
+        // console.log(ul_list[i].style.width);
     }
 }
 

@@ -1,3 +1,4 @@
+
 main {
     /* overflow: hidden; */
 }
@@ -619,7 +620,7 @@ section {
 .new_hero_skin {
     width: 820px;
     height: 254px;
-    margin-top: 66px;
+    margin-top: 51px;
 }
 
 .new_hero,
@@ -783,7 +784,7 @@ section {
 .new_version {
     width: 496px;
     height: 254px;
-    margin-top: 66px;
+    margin-top: 51px;
 }
 
 .new_version li {
@@ -2254,7 +2255,7 @@ section.hero_wrap {
 
 .partner .href_mask {
     line-height: 58px;
-} 
+}
 
 .partner .href_mask .arrow {
     background-position: -342px -99px;
@@ -2330,4 +2331,210 @@ section.hero_wrap {
 
 .partner_list:hover .scrollbar {
     width: 8px;
+}
+
+.rightnav_bar {
+    position: fixed;
+    right: 0;
+    bottom: 181px;
+    width: 70px;
+    /* height: 364px; */
+    height: 304px;
+    padding: 6px 0 0 2px;
+    background-color: #ffffff;
+    border-radius: 9px 0 0 9px;
+    font-size: 12px;
+    text-align: center;
+    transition: height 1s;
+    overflow: hidden;
+}
+
+.rightnav_bar li {
+    width: 70px;
+    height: 47px;
+    margin-bottom: 11px;
+    cursor: pointer;
+}
+
+.rightnav_bar a {
+    color: #92a8ab;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0);
+    }
+
+    10% {
+        transform: translateY(5px) scaleX(1.2) scaleY(.8);
+    }
+
+    30% {
+        transform: translateY(-13px) scaleX(1) scaleY(1) rotateZ(5deg);
+    }
+
+    50% {
+        transform: translateY(0) scale(1) rotateZ(0);
+    }
+
+    55% {
+        transform: translateY(0) scaleX(1.1) scaleY(.9) rotateZ(0);
+    }
+
+    70% {
+        transform: translateY(-4px) scaleX(1) scaleY(1) rotateZ(-2deg);
+    }
+
+    80% {
+        transform: translateY(0) scaleX(1) scaleY(1) rotateZ(0);
+    }
+
+    85% {
+        transform: translateY(0) scaleX(1.05) scaleY(.95) rotateZ(0);
+    }
+
+    100% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+    }
+}
+
+.rightnav_bar i {
+    display: block;
+    margin: 10px auto 5px auto;
+    background-image: url(../images/comm-spr.png);
+    background-repeat: no-repeat;
+}
+
+.rightnav_bar li:hover i,
+.rightnav_bar li.on i {
+    animation: jump 1.5s;
+}
+
+.rightnav_bar li:hover a,
+.rightnav_bar li.on a {
+    color: #309cac;
+    font-weight: 700;
+}
+
+.icon_hot_nav {
+    width: 18px;
+    height: 22px;
+    background-position: -239px -99px;
+}
+
+.hotact_nav:hover .icon_hot_nav,
+.hotact_nav.on .icon_hot_nav {
+    background-position: -216px -99px;
+}
+
+.icon_video_nav {
+    width: 18px;
+    height: 22px;
+    background-position: -262px -99px;
+}
+
+.video_nav:hover .icon_video_nav,
+.video_nav.on .icon_video_nav {
+    background-position: -193px -99px;
+}
+
+.icon_match_nav {
+    width: 22px;
+    height: 21px;
+    background-position: -220px -46px;
+}
+
+.match_nav:hover .icon_match_nav,
+.match_nav.on .icon_match_nav {
+    background-position: -247px -46px;
+}
+
+.icon_hore_nav {
+    width: 19px;
+    height: 22px;
+    background-position: -269px -72px;
+}
+
+.hero_nav:hover .icon_hore_nav,
+.hero_nav.on .icon_hore_nav {
+    background-position: -293px -72px;
+}
+
+.icon_fanart_nav {
+    width: 24px;
+    height: 20px;
+    background-position: -287px -12px;
+}
+
+.fanart_nav:hover .icon_fanart_nav,
+.fanart_nav.on .icon_fanart_nav {
+    background-position: -258px -12px;
+}
+
+.icon_polo_nav {
+    width: 33px;
+    height: 29px;
+    background-position: -193px -12px;
+}
+
+.icon_polo_nav.show {
+    animation: showPolo 1.5s 1;
+}
+
+@keyframes showPolo {
+    0% {
+        transform: translateY(70px) scaleX(.8) scaleY(1.2);
+    }
+
+    44% {
+        transform: translateY(0) scaleX(.8) scaleY(1.2);
+    }
+
+    50% {
+        transform: translateY(-10px) scaleX(1) scaleY(1);
+    }
+
+    60% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+    }
+
+    70% {
+        transform: translateY(0) scaleX(1.1) scaleY(.9);
+    }
+
+    100%,
+    80% {
+        transform: translateY(0) scaleX(1) scaleY(1);
+    }
+}
+
+.top_nav {
+    display: none;
+}
+
+.top_nav:hover .polo {
+    display: block;
+    animation: jump 1.5s;
+}
+
+.top_nav .polo {
+    display: none;
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    width: 35px;
+    height: 34px;
+}
+
+.top_nav.show {
+    display: block;
+    animation: showPolo 1.5s;
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 200px;
+    height: 100px;
 }
