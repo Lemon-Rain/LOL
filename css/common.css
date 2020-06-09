@@ -398,13 +398,17 @@ footer {
 .footer_inner {
     max-width: 1358px;
     min-width: 1230px;
-    padding: 15 20px;
+    padding: 15px 20px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .foot_left.fl {
-    margin: 47px 0 0 33px;
+    margin: 33px 0 0 10px;
+}
+
+.foot_right.fl {
+    margin-left: 246px;
 }
 
 .logo_left {
@@ -420,6 +424,7 @@ footer {
     display: inline-block;
     width: 82px;
     height: 28px;
+    margin: 0px 0px 6px -3px;
     background: url(../images/topfoot-spr.png) no-repeat;
     background-position: -216px -84px;
 }

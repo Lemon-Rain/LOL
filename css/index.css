@@ -2075,6 +2075,10 @@ section.hero_wrap {
     background-color: #eee;
 }
 
+.fan_wrap {
+    padding: 66px 0 82px 0;
+}
+
 .fanart .top_tab {
     width: 820px;
     line-height: 35px;
@@ -2082,6 +2086,7 @@ section.hero_wrap {
 
 .fanart_container_left {
     width: 840px;
+    height: 368px;
     margin-top: 21px;
 }
 
@@ -2181,6 +2186,7 @@ section.hero_wrap {
 
 .fanart_container_right {
     width: 496px;
+    height: 368px;
 }
 
 .main_column {
