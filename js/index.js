@@ -260,6 +260,20 @@ window.onload = function () {
         }
     });
 
+    this.partnerSwiper = new Swiper('#swiper13', {
+        scrollContainer: true,
+        mode: 'vertical',
+        preventLinks: true,
+        grabCursor: true,
+        cssWidthAndHeight: true,
+        mousewheelControl: true,
+        scrollbar: {
+            container: '.partner_list>.scrollbar',
+            hide: false,
+            draggable: true
+        }
+    });
+
     var ul_list = document.querySelector('.hot_album').querySelectorAll('.swiper-wrapper');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
@@ -304,6 +318,13 @@ function selectHeroType(n) {
         }
     });
     scrollbarInit(this.heroSwiper);
+}
+
+function showPartner() {
+    setTimeout(function () {
+        // alert(hello);
+        scrollbarInit(this.partnerSwiper);
+    }, 100)
 }
 
 // function Init() {

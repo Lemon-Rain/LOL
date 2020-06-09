@@ -896,20 +896,20 @@ section {
     filter: brightness(1.15);
 }
 
-.week_free .icon_left,
-.week_free .icon_right {
+.icon_left,
+.icon_right {
     display: inline-block;
     width: 20px;
     height: 9px;
     background: url(../images/index-spr.png) no-repeat;
 }
 
-.week_free .icon_left {
+.icon_left {
     margin-right: 12px;
     background-position: -531px -226px;
 }
 
-.week_free .icon_right {
+.icon_right {
     margin-left: 8px;
     background-position: -506px -226px;
 }
@@ -2089,8 +2089,8 @@ section.hero_wrap {
     float: left;
     position: relative;
     width: 192px;
-    height: 172px;
-    margin: 0 17px 17px 0;
+    height: 176px;
+    margin: 0 17px 16px 0;
     overflow: hidden;
     vertical-align: middle;
 }
@@ -2184,5 +2184,144 @@ section.hero_wrap {
 }
 
 .main_column {
-    margin-top: -5px;
+    width: 241px;
+    height: 411px;
+    margin-top: -22px;
+    transition: filter .3s, transform .3s;
+    cursor: pointer;
+}
+
+.main_column:hover {
+    filter: brightness(1.15);
+    transform: translateY(-10px);
+}
+
+.fanart_right_list {
+    width: 240px;
+    margin-top: 22px;
+}
+
+.fanart_right_list .item {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 87px;
+    margin-bottom: 16px;
+    background-color: pink;
+    transition: filter .3s;
+}
+
+.fanart_right_list .item:not(:last-child):hover {
+    filter: brightness(1.15);
+}
+
+.fanart_right_list .item.partner {
+    height: 58px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -193px -253px;
+}
+
+.fanart_right_list img {
+    width: 100%;
+}
+
+.href_mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 87px;
+    color: #fff;
+}
+
+.icon_inline {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin: 0 5px 0 10px;
+    background: url(../images/index-spr.png) no-repeat;
+    background-position: -484px -226px;
+    vertical-align: middle;
+}
+
+.partner .href_mask {
+    line-height: 58px;
+} 
+
+.partner .href_mask .arrow {
+    background-position: -342px -99px;
+}
+
+.href_mask .icon_left {
+    margin: 0 12px 0 45px;
+}
+
+.href_mask .icon_right {
+    margin-left: 12px;
+}
+
+.partner:hover .partner_list {
+    display: block;
+    animation: topIn2 .2s;
+}
+
+@keyframes topIn2 {
+    0% {
+        display: none;
+        transform: translateY(-10px);
+        opacity: 0
+    }
+
+    100% {
+        display: block;
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.partner_list {
+    display: none;
+    position: absolute;
+    top: 58px;
+    width: 239px;
+    height: 277px;
+    padding: 6px 0;
+    background-color: #fff;
+    box-shadow: 0 3px 10px #ccc;
+    animation: topIn2 .2s;
+    overflow: hidden;
+}
+
+.partner_item {
+    margin: 8px 0;
+    vertical-align: middle;
+}
+
+.partner_item>a {
+    display: block;
+    width: 100%;
+    height: 19px;
+    padding-left: 12px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #676767;
+}
+
+.partner_item>a:hover {
+    background-color: #eeeeee;
+}
+
+.partner_list .scrollbar {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    width: 5px;
+    height: 266px;
+    transition: width .2s;
+}
+
+.partner_list:hover .scrollbar {
+    width: 8px;
 }
