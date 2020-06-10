@@ -17,7 +17,7 @@ function resize() {
 
 window.onresize = resize;
 window.onload = resize;
-window.onload = window.onscroll;
+window.onload = window.scroll;
 
 function toScroll(n) {
     window.scrollTo({
@@ -28,10 +28,10 @@ function toScroll(n) {
 
 function fun() {
     var polo = document.querySelector('.top_nav');
-    polo.className = 'top_nav show'
+    polo.className = 'top_nav show';
 }
 
-window.onscroll = function () {
+window.onscroll = function() {
     var Y = window.scrollY;
     var bar = this.document.querySelector('.rightnav_bar');
     var polo = document.querySelector('.top_nav');
@@ -39,7 +39,7 @@ window.onscroll = function () {
     if (Y > 50) {
         document.querySelector("header").className = "small pr";
     }
-    console.log('当前距离顶部' + Y + 'px');
+    // console.log('当前距离顶部' + Y + 'px');
 
     if (Y >= 300) {
         bar.style.height = '364px';
@@ -383,13 +383,6 @@ function selectHeroType(n) {
 
 function showPartner() {
     setTimeout(function () {
-        // alert(hello);
         scrollbarInit(this.partnerSwiper);
-    }, 100)
+    }, 1)
 }
-
-// function Init() {
-//     this.heroSwiper.reInit();
-//     this.heroSwiper.resizeFix();
-//     this.heroSwiper.resize();
-// }

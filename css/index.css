@@ -1,4 +1,3 @@
-
 main {
     /* overflow: hidden; */
 }
@@ -611,10 +610,14 @@ section {
     background-position: -193px -46px;
 }
 
-.gamefunc .icon_new {
+.gamefunc.fr .icon_new {
     position: absolute;
     top: 0;
     left: 0;
+    width: 30px;
+    height: 15px;
+    background: url(../images/comm-spr.png) no-repeat;
+    background-position: -301px -46px;
 }
 
 .new_hero_skin {
@@ -2338,7 +2341,7 @@ section.hero_wrap {
     right: 0;
     bottom: 181px;
     width: 70px;
-    /* height: 364px; */
+    z-index: 100;
     height: 304px;
     padding: 6px 0 0 2px;
     background-color: #ffffff;
@@ -2521,7 +2524,7 @@ section.hero_wrap {
     display: none;
     position: absolute;
     top: -2px;
-    right: -6px;
+    right: -5px;
     width: 35px;
     height: 34px;
 }
