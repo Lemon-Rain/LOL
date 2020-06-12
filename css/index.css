@@ -1496,7 +1496,9 @@ ul.swiper-container {
     color: #385155;
 }
 
-.team_img {
+div.selected .team_img {
+    display: block;
+    margin: 0 auto;
     width: 50px;
     height: 50px;
 }
