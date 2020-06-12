@@ -1102,8 +1102,9 @@ section {
     display: none;
 }
 
-.new_video .content_item.selected {
+.content_item.selected {
     display: block;
+    animation: opacityin .1s;
 }
 
 .new_video .content_item li {
@@ -1256,6 +1257,7 @@ section {
 
 .album_img {
     width: 156px;
+    height: 212px;
 }
 
 .hot_album .album_name {
@@ -1277,6 +1279,7 @@ section {
     box-sizing: content-box;
     font-size: 14px;
     color: #919091;
+    overflow: hidden;
 }
 
 .album_title:hover {
