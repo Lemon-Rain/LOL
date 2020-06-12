@@ -2536,11 +2536,3 @@ section.hero_wrap {
     display: block;
     animation: showPolo 1.5s;
 }
-
-button {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    width: 200px;
-    height: 100px;
-}
