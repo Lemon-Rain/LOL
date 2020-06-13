@@ -1780,6 +1780,7 @@ div.selected .team_img {
     border-radius: 2px;
     background-color: #abc0c3 !important;
     cursor: n-resize;
+    transition: width .2s;
 }
 
 .score_rank .swiper-container:hover .swiper-scrollbar {
