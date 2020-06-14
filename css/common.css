@@ -10,16 +10,6 @@ header img.fl {
     margin-top: 10px;
 }
 
-header.big {
-    height: 720px;
-    background: url("../images/header_big_bg.jpg") no-repeat center;
-}
-
-header.small {
-    height: 360px;
-    background: url("../images/header_small_bg.jpg") no-repeat center;
-}
-
 header .head_nav {
     position: relative;
     top: 0;

@@ -1,5 +1,17 @@
+header.big {
+    height: 720px;
+    background: url("../images/header_big_bg.jpg") no-repeat center;
+}
+
+header.small {
+    height: 360px;
+    background: url("../images/header_small_bg.jpg") no-repeat center;
+}
+
 main {
-    /* overflow: hidden; */
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .top_wrap_bg {

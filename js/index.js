@@ -16,7 +16,6 @@ function resize() {
 }
 
 window.onresize = resize;
-window.onload = resize;
 window.onload = window.scroll;
 
 function toScroll(n) {
@@ -39,7 +38,6 @@ window.onscroll = function() {
     if (Y > 50) {
         document.querySelector("header").className = "small pr";
     }
-    // console.log('当前距离顶部' + Y + 'px');
 
     if (Y >= 300) {
         bar.style.height = '364px';
@@ -192,14 +190,12 @@ function select(name, n) {
             loop: true,
             simulateTouch: false,
         });
-        //左右按钮
         document.querySelector('.btn_left').onclick = this.programSwiper.swipePrev;
         document.querySelector('.btn_right').onclick = this.programSwiper.swipeNext;
     }
 
     if (name == '.match_center' && n != 1) {
         var i = n == 0 ? 0 : 1;
-        // console.log("i:" + i);
 
         this.programSwiper2.destroy();
         this.programSwiper2 = new Swiper('#swiper' + (i + 8), {
@@ -303,7 +299,6 @@ window.onload = function () {
             container: '#swiper10 .swiper-scrollbar',
             hide: false,
             draggable: true,
-            // snapOnRelease: true
         }
     });
 
@@ -340,14 +335,12 @@ window.onload = function () {
         var lis = ul_list[i].querySelectorAll('li');
         var n = lis.length;
         ul_list[i].style.width = n * 171 + 'px'
-        // console.log(ul_list[i].style.width);
     }
     var ul_list = document.querySelector('.match_center').querySelectorAll('.swiper-wrapper');
     for (var i = 0; i < ul_list.length; i++) {
         var lis = ul_list[i].querySelectorAll('li');
         var n = lis.length;
         ul_list[i].style.width = n * 275 + 'px'
-        // console.log(ul_list[i].style.width);
     }
 }
 

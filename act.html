@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/act.css">
+    <title>英雄联盟官方网站-腾讯游戏</title>
+</head>
+
+<body>
+    <header class="pr">
+        <div class="head_nav w pr">
+            <img src="./images/logo-public.png" alt="" class="fl">
+            <ul class="fl" onmouseover="subNavDown()" onmouseout="subNavUp()">
+                <li>
+                    <a href="javascript:;">
+                        <h3 class="head_title">游戏资料</h3>
+                        <span class="head_subtitle">GAME INFO</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <h3 class="head_title">商城/合作</h3>
+                        <span class="head_subtitle">STORE</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <h3 class="head_title">社区互动</h3>
+                        <span class="head_subtitle">COMMUNITY</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <h3 class="head_title">赛事官网</h3>
+                        <span class="head_subtitle">ESPORTS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <h3 class="head_title">自助系统</h3>
+                        <span class="head_subtitle">SYSTEM</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li><a href="javascript:;" class="icon_search" onclick="searchOpen()"></a></li>
+                <li><a href="javascript:;" class="icon_phone" onmouseover="display('.hover_phone', 'show')"
+                        onmouseout="display('.hover_phone', 'none')"></a></li>
+                <li>
+                    <div class="unlogin pr" onmouseover="display('.hover_login', 'show')"
+                        onmouseout="display('.hover_login', 'none')">
+                        <a href="javascript:;" class="icon_user fl"><img src="images/default.png" alt=""
+                                srcset=""></a><span>亲爱的召唤师，欢迎</span><a href="javascript:;" class="head_login">登录</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="hover_phone pa" onmouseover="display('.hover_phone', 'show')"
+                onmouseout="display('.hover_phone', 'none')">
+                <div class="qrcode">
+                    <img src="images/zm-qrcode.jpg" class="qrcode_img">
+                </div>
+                <p>扫码下载掌上英雄联盟</p>
+                <img src="images/polo.gif" class="polo pa">
+            </div>
+            <div class="hover_login pa" onmouseover="display('.hover_login', 'show')"
+                onmouseout="display('.hover_login', 'none')">
+                <p class="p1">
+                    登录并且绑定大区后才可以查看您的具体信息哦<br>
+                    (包括战绩、资产、声望）
+                </p>
+                <p class="p2">
+                    官网个人信息显示略有延迟，请以游戏数据为准
+                </p>
+                <a href="javascript:;" class="">进入个人中心<i class="arrow"></i></a>
+            </div>
+        </div>
+        <div class="head_sub_nav pa hide" onmouseover="subNavDown()" onmouseout="subNavUp()">
+            <div class="head_sub_nav_inner w">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span>游戏下载</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>新手指引</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>资料库</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>云顶之弈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>攻略中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>开发者基地</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>海克斯战利品库</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>英雄联盟宇宙</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span>点券充值</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_hot"></i>
+                            <span>道聚城</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>周边商城</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>LOL桌游</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>LOL信用卡</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>网吧特权</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>电竞小说</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span>官方社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>视频中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>官方论坛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>官方微信</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>官方微博</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>玩家创作馆</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>作者入驻计划</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>玩家服务</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_hot"></i>
+                            <span>LPL职业联赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_hot"></i>
+                            <span>LDL发展联赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>全球总决赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>全明星赛</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>季中杯</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>德玛西亚杯</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>全国高校联赛</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>转区系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_hot"></i>
+                            <span>封号查询</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>账号注销</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon_new"></i>
+                            <span>信誉分系统</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>服务器状态查询</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>秩序殿堂</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>峡谷之巅</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hover_search pa">
+            <div class="hover_search_inner w">
+                <a href="javascript:;" class="icon_close" onclick="searchClose()"></a>
+                <input type="text" placeholder="搜索 lol.qq.com">
+                <a href="javascript:;" class="icon_search"></a>
+            </div>
+            <div class="hover_phone pa" onmouseover="display('.hover_phone', 'show')"
+                onmouseout="display('.hover_phone', 'none')">
+                <div class="qrcode">
+                    <img src="images/zm-qrcode.jpg" class="qrcode_img">
+                </div>
+                <p>扫码下载掌上英雄联盟</p>
+                <img src="images/polo.gif" class="polo pa">
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="main">
+            <video src="videos/summer.mp4" autoplay loop muted></video>
+            <div class="slogo"></div>
+            <p class="time">活动时间：2020年6月12日12:00-7月22日23:59</p>
+            <p class="tips"></p>
+            <div class="btns">
+                <a href="index.html" class="btn_os"></a>
+                <a href="javascript:;" class="btn_get"></a>
+                <a href="javascript:;" class="btn_dl"></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <div class="footer">
+        <div class="foot_warp">
+            <p>
+                <a href="javascript:;">腾讯互动娱乐</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">服务条款</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">隐私保护指引</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">儿童隐私保护指引</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">腾讯游戏招聘</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">腾讯游戏客服</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">游戏列表</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">成长守护平台</a>
+                &nbsp;|&nbsp;
+                <a href="javascript:;">广告服务及商务合作</a>
+            </p>
+            <p>COPYRIGHT © 1998 – 2020 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p><a href="javascript:;">腾讯公司 版权所有</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
